@@ -22,8 +22,8 @@ int main(){
 	*/
 	//Third task
 	int x,Result;
-	cin << x;
-	Result = x +
-
+	cin >> x;
+	Result = (x/100)*100 + (x/10)%10 + (x%10)*10;
+	cout<< Result<< x%10;
 	return 0;
 }
