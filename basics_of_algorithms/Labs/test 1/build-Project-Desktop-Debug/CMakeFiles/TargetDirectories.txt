@@ -1,0 +1,8 @@
+/home/z0tedd/Documents/university/basics_of_algorithms/Labs/test 1/build-Project-Desktop-Debug/CMakeFiles/Project.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/Labs/test 1/build-Project-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/Labs/test 1/build-Project-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/Labs/test 1/build-Project-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/Labs/test 1/build-Project-Desktop-Debug/CMakeFiles/install.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/Labs/test 1/build-Project-Desktop-Debug/CMakeFiles/install/local.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/Labs/test 1/build-Project-Desktop-Debug/CMakeFiles/install/strip.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/Labs/test 1/build-Project-Desktop-Debug/CMakeFiles/Project_autogen.dir

@@ -1,0 +1,35 @@
+.site-description {
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: 30px;
+  line-height: 92px;
+}
+
+.entry.excerpt p {
+  color: #2e2c2c;
+}
+
+.wp-block-image figcaption {
+  font-style: normal;
+  font-weight: bold;
+  color: #0f0f0f;
+}
+
+.published.updated {
+  display: none;
+}
+
+.sidebar-top p {
+  color: #000000;
+}
+
+.sidebar.s1 .widget_calendar caption {
+  color: #000000;
+}
+
+[role=search].search-form input[type=submit] {
+  color: #000000;
+
+}
