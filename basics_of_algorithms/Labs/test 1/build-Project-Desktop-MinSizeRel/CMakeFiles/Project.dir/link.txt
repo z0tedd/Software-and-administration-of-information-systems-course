@@ -1,0 +1,1 @@
+/usr/bin/g++ -Os -DNDEBUG CMakeFiles/Project.dir/Project_autogen/mocs_compilation.cpp.o CMakeFiles/Project.dir/main.cpp.o CMakeFiles/Project.dir/mainwindow.cpp.o -o Project  /usr/lib/libQt6Widgets.so.6.6.0 /usr/lib/libQt6Gui.so.6.6.0 /usr/lib/libQt6Core.so.6.6.0 /usr/lib/libGLX.so /usr/lib/libOpenGL.so 

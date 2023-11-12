@@ -31,19 +31,21 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: \
  /usr/include/assert.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdbool.h \
  /usr/include/qt6/QtCore/qtversionchecks.h \
+ /usr/include/qt6/QtCore/qtconfiginclude.h \
  /usr/include/qt6/QtCore/qconfig.h \
  /usr/include/qt6/QtCore/qtcore-config.h \
  /usr/include/qt6/QtCore/qtconfigmacros.h \
  /usr/include/qt6/QtCore/qtcoreexports.h \
- /usr/include/qt6/QtCore/qtpreprocessorsupport.h \
- /usr/include/qt6/QtCore/qtnoop.h \
+ /usr/include/qt6/QtCore/qcompilerdetection.h \
  /usr/include/qt6/QtCore/qsystemdetection.h \
  /usr/include/qt6/QtCore/qprocessordetection.h \
- /usr/include/qt6/QtCore/qcompilerdetection.h \
- /usr/include/c++/13.2.1/version /usr/include/qt6/QtCore/qassert.h \
- /usr/include/qt6/QtCore/qtypes.h \
+ /usr/include/c++/13.2.1/version \
+ /usr/include/qt6/QtCore/qtdeprecationmarkers.h \
+ /usr/include/qt6/QtCore/qtpreprocessorsupport.h \
+ /usr/include/qt6/QtCore/qassert.h /usr/include/qt6/QtCore/qtnoop.h \
+ /usr/include/qt6/QtCore/qtypes.h /usr/include/qt6/QtCore/qtversion.h \
  /usr/include/qt6/QtCore/qtclasshelpermacros.h \
- /usr/include/qt6/QtCore/qtversion.h /usr/include/qt6/QtCore/qtypeinfo.h \
+ /usr/include/qt6/QtCore/qtypeinfo.h \
  /usr/include/qt6/QtCore/qcontainerfwd.h /usr/include/c++/13.2.1/variant \
  /usr/include/c++/13.2.1/bits/enable_special_members.h \
  /usr/include/c++/13.2.1/bits/exception_defines.h \
@@ -79,7 +81,6 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtCore/qdarwinhelpers.h \
  /usr/include/qt6/QtCore/qexceptionhandling.h \
  /usr/include/qt6/QtCore/qforeach.h \
- /usr/include/qt6/QtCore/qtdeprecationmarkers.h \
  /usr/include/qt6/QtCore/qttypetraits.h \
  /usr/include/qt6/QtCore/qfunctionpointer.h \
  /usr/include/qt6/QtCore/qglobalstatic.h \
@@ -249,6 +250,8 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: \
  /usr/include/c++/13.2.1/pstl/execution_defs.h \
  /usr/include/c++/13.2.1/algorithm \
  /usr/include/c++/13.2.1/pstl/glue_algorithm_defs.h \
+ /usr/include/qt6/QtCore/q20functional.h \
+ /usr/include/qt6/QtCore/q20memory.h \
  /usr/include/qt6/QtCore/qbytearrayalgorithms.h \
  /usr/include/qt6/QtCore/qbytearrayview.h \
  /usr/include/qt6/QtCore/qstringfwd.h \
@@ -256,14 +259,15 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: \
  /usr/include/c++/13.2.1/stdlib.h \
  /usr/include/qt6/QtCore/qstringliteral.h \
  /usr/include/qt6/QtCore/qstringalgorithms.h \
+ /usr/include/qt6/QtCore/qlatin1stringview.h \
  /usr/include/qt6/QtCore/qanystringview.h \
  /usr/include/qt6/QtCore/qutf8stringview.h \
  /usr/include/qt6/QtCore/qstringtokenizer.h \
  /usr/include/qt6/QtCore/qstringbuilder.h /usr/include/c++/13.2.1/numeric \
  /usr/include/c++/13.2.1/bits/stl_numeric.h \
  /usr/include/c++/13.2.1/pstl/glue_numeric_defs.h \
- /usr/include/qt6/QtCore/qmargins.h /usr/include/qt6/QtCore/qlist.h \
- /usr/include/qt6/QtCore/qiterator.h \
+ /usr/include/qt6/QtCore/qmargins.h /usr/include/qt6/QtCore/q23utility.h \
+ /usr/include/qt6/QtCore/qlist.h /usr/include/qt6/QtCore/qiterator.h \
  /usr/include/qt6/QtCore/qbytearraylist.h \
  /usr/include/qt6/QtCore/qstringlist.h \
  /usr/include/qt6/QtCore/qalgorithms.h \
@@ -272,6 +276,7 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtGui/qwindowdefs.h \
  /usr/include/qt6/QtCore/qobjectdefs.h \
  /usr/include/qt6/QtCore/qobjectdefs_impl.h \
+ /usr/include/qt6/QtCore/qfunctionaltools_impl.h \
  /usr/include/qt6/QtCore/qrect.h /usr/include/qt6/QtCore/qpoint.h \
  /usr/include/qt6/QtGui/qcolor.h /usr/include/qt6/QtGui/qrgb.h \
  /usr/include/qt6/QtGui/qrgba64.h \
@@ -280,13 +285,15 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
- /usr/include/bits/uio_lim.h /usr/include/qt6/QtCore/qsharedpointer.h \
- /usr/include/qt6/QtCore/qshareddata.h \
- /usr/include/qt6/QtCore/qsharedpointer_impl.h \
- /usr/include/qt6/QtCore/qmetatype.h /usr/include/qt6/QtCore/qcompare.h \
- /usr/include/qt6/QtCore/qdatastream.h \
+ /usr/include/bits/uio_lim.h /usr/include/qt6/QtCore/qshareddata.h \
+ /usr/include/qt6/QtGui/qimage.h /usr/include/qt6/QtGui/qpixelformat.h \
+ /usr/include/qt6/QtGui/qtransform.h /usr/include/qt6/QtGui/qpolygon.h \
+ /usr/include/qt6/QtGui/qregion.h /usr/include/qt6/QtCore/qdatastream.h \
  /usr/include/qt6/QtCore/qscopedpointer.h \
- /usr/include/qt6/QtCore/qiodevicebase.h \
+ /usr/include/qt6/QtCore/qiodevicebase.h /usr/include/qt6/QtCore/qline.h \
+ /usr/include/qt6/QtGui/qkeysequence.h \
+ /usr/include/qt6/QtWidgets/qwidget.h /usr/include/qt6/QtCore/qobject.h \
+ /usr/include/qt6/QtCore/qmetatype.h /usr/include/qt6/QtCore/qcompare.h \
  /usr/include/qt6/QtCore/qfloat16.h /usr/include/qt6/QtCore/qmath.h \
  /usr/include/qt6/QtCore/qiterable.h \
  /usr/include/qt6/QtCore/qmetacontainer.h \
@@ -298,11 +305,6 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: \
  /usr/include/c++/13.2.1/bits/stl_tree.h \
  /usr/include/c++/13.2.1/bits/stl_map.h \
  /usr/include/c++/13.2.1/bits/stl_multimap.h \
- /usr/include/qt6/QtGui/qimage.h /usr/include/qt6/QtGui/qpixelformat.h \
- /usr/include/qt6/QtGui/qtransform.h /usr/include/qt6/QtGui/qpolygon.h \
- /usr/include/qt6/QtGui/qregion.h /usr/include/qt6/QtCore/qline.h \
- /usr/include/qt6/QtGui/qkeysequence.h \
- /usr/include/qt6/QtWidgets/qwidget.h /usr/include/qt6/QtCore/qobject.h \
  /usr/include/qt6/QtCore/qobject_impl.h \
  /usr/include/qt6/QtCore/qbindingstorage.h /usr/include/c++/13.2.1/chrono \
  /usr/include/c++/13.2.1/bits/chrono.h /usr/include/c++/13.2.1/ratio \
@@ -311,13 +313,15 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: \
  /usr/include/qt6/QtCore/qtextstream.h \
  /usr/include/qt6/QtCore/qstringconverter_base.h \
  /usr/include/qt6/QtCore/qcontiguouscache.h \
+ /usr/include/c++/13.2.1/climits /usr/include/qt6/QtCore/qsharedpointer.h \
+ /usr/include/qt6/QtCore/qsharedpointer_impl.h \
  /usr/include/qt6/QtCore/qmap.h \
  /usr/include/qt6/QtCore/qshareddata_impl.h \
  /usr/include/qt6/QtCore/qset.h /usr/include/qt6/QtCore/qhash.h \
  /usr/include/qt6/QtCore/qvarlengtharray.h \
- /usr/include/qt6/QtCore/q20memory.h /usr/include/qt6/QtGui/qpalette.h \
- /usr/include/qt6/QtGui/qbrush.h /usr/include/qt6/QtGui/qfont.h \
- /usr/include/qt6/QtGui/qfontmetrics.h /usr/include/qt6/QtGui/qfontinfo.h \
+ /usr/include/qt6/QtGui/qpalette.h /usr/include/qt6/QtGui/qbrush.h \
+ /usr/include/qt6/QtGui/qfont.h /usr/include/qt6/QtGui/qfontmetrics.h \
+ /usr/include/qt6/QtGui/qfontinfo.h \
  /usr/include/qt6/QtWidgets/qsizepolicy.h \
  /usr/include/qt6/QtGui/qcursor.h /usr/include/qt6/QtGui/qbitmap.h \
  /usr/include/qt6/QtWidgets/QMainWindow \

@@ -90,9 +90,55 @@
 <node TEXT="USB" ID="ID_1229236175" CREATED="1696696571066" MODIFIED="1696696590812">
 <node TEXT="" ID="ID_1157028935" CREATED="1696696572520" MODIFIED="1696696572520"/>
 </node>
-<node TEXT="UART" ID="ID_915373345" CREATED="1696696592891" MODIFIED="1696696622405" LINK="https://habr.com/ru/articles/109395/"/>
+<node TEXT="UART" ID="ID_915373345" CREATED="1696696592891" MODIFIED="1698483116231" LINK="https://habr.com/ru/articles/109395/"><richcontent TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Universal asynronius reciver transmiter. Особенность данного интерфейса передачи в том, что из всех последовательных интерфейсов он универсальный. Так как данный интерфейс асинхронный, то ему не нужно синхронизироваться с другими источниками(скорость задается заранее). Можно одновременно передавать и получать(дуплексный метод).
+    </p>
+    <p>
+      На железе у нас пин RX И пин TX. Можно подключить не более 3 устройств. Подключаются они крест на крест RX - TX, TX - RX.&#xa0;&#xa0;Arduino можно подключать напрямую, а для stm32 нельзя так как у stm32 3.3v - логический уровень,&#xa0;&#xa0;а у arduion 5 v.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 <node TEXT="Технология pull" ID="ID_1416112273" CREATED="1696697415410" MODIFIED="1696697424534"/>
 <node TEXT="gpio" ID="ID_711588543" CREATED="1696697572935" MODIFIED="1696697576780"/>
+<node TEXT="Цифровой сигнал" ID="ID_1028075504" CREATED="1698481576747" MODIFIED="1698481587501"/>
+<node TEXT="Аналоговый сигнал" ID="ID_881295748" CREATED="1698481589046" MODIFIED="1698481604227"/>
+<node TEXT="i2c" ID="ID_1362476744" CREATED="1698483900945" MODIFIED="1698484518676"><richcontent TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Можно подключать несколько устройств. Более высокая скорость. I2c - синхронный протокол, передача идет по общему сигналу синхронизации. Генерацией сигнала синхронизацией занимается master, а slave отвечают ему.
+    </p>
+    <p>
+      Slaves имеют свой номер, master номера не имеет. Во время передачи рабы слушают мастера. Рабы никогда не обращаются к своему мастеру.<br/>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="spi" ID="ID_1201166916" CREATED="1698484976311" MODIFIED="1698486499849"><richcontent TYPE="DETAILS" HIDDEN="true">
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Надежнее и быстрее i2c. Реализация сложнее, чем у i2c. Spi - нужно как минимум 3 провода. Система похожая на i2c с мастером и рабами. Miso(master input slave output, как rx или tx), mosi(master output slave input, как rx или tx), sclk(задает тактовый сигнал для общения). SS(slave select) - провод, чтобы master точно знал с каким рабом он разговаривает. SPI дороже и сложнее.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node TEXT="Важные компоненты" POSITION="top_or_left" ID="ID_1596505340" CREATED="1696696679958" MODIFIED="1696696686567">
 <node TEXT="Подтягивающий резистор" ID="ID_830432755" CREATED="1696696687553" MODIFIED="1696696695060"/>
