@@ -32,9 +32,12 @@ def f(x):
                 k+=1
         if k<dsuper:
             m2.remove(i)
-for x in range(1,len(m2)):
-    if x <= len(m2)-1:
-        f(m2[x])
+for x in m2:
+    f(x)
+for x in m2:
+    f(x)
+for x in m2:
+    f(x)
 
 k2= 0
 mbf = []
@@ -87,5 +90,3 @@ for i in range(0, len(m2)):
 #print(m2)
 '''
 #m3 = [x for x in m2]
-
-
