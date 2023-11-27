@@ -400,7 +400,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=27
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=7
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=8
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -701,6 +701,8 @@ QT_FEATURE_clipboard:INTERNAL=ON
 QT_FEATURE_clock_gettime:INTERNAL=ON
 //Qt feature: clock_monotonic (from target Qt6::Core)
 QT_FEATURE_clock_monotonic:INTERNAL=ON
+//Qt feature: close_range (from target Qt6::Core)
+QT_FEATURE_close_range:INTERNAL=ON
 //Qt feature: colordialog (from target Qt6::Widgets)
 QT_FEATURE_colordialog:INTERNAL=ON
 //Qt feature: colornames (from target Qt6::Gui)
@@ -1031,6 +1033,8 @@ QT_FEATURE_opengles31:INTERNAL=OFF
 QT_FEATURE_opengles32:INTERNAL=OFF
 //Qt feature: openssl (from target Qt6::Core)
 QT_FEATURE_openssl:INTERNAL=ON
+//Qt feature: openssl_hash (from target Qt6::Core)
+QT_FEATURE_openssl_hash:INTERNAL=OFF
 //Qt feature: openssl_linked (from target Qt6::Core)
 QT_FEATURE_openssl_linked:INTERNAL=ON
 //Qt feature: opensslv11 (from target Qt6::Core)
@@ -1044,7 +1048,7 @@ QT_FEATURE_pcre2:INTERNAL=ON
 //Qt feature: pdf (from target Qt6::Gui)
 QT_FEATURE_pdf:INTERNAL=ON
 //Qt feature: permissions (from target Qt6::Core)
-QT_FEATURE_permissions:INTERNAL=OFF
+QT_FEATURE_permissions:INTERNAL=ON
 //Qt feature: picture (from target Qt6::Gui)
 QT_FEATURE_picture:INTERNAL=ON
 //Qt feature: pkg_config (from target Qt6::Core)
@@ -1065,6 +1069,10 @@ QT_FEATURE_poll_ppoll:INTERNAL=ON
 QT_FEATURE_poll_select:INTERNAL=OFF
 //Qt feature: posix_fallocate (from target Qt6::Core)
 QT_FEATURE_posix_fallocate:INTERNAL=ON
+//Qt feature: posix_sem (from target Qt6::Core)
+QT_FEATURE_posix_sem:INTERNAL=ON
+//Qt feature: posix_shm (from target Qt6::Core)
+QT_FEATURE_posix_shm:INTERNAL=ON
 //Qt feature: precompile_header (from target Qt6::Core)
 QT_FEATURE_precompile_header:INTERNAL=ON
 //Qt feature: printsupport (from target Qt6::Core)
@@ -1225,6 +1233,10 @@ QT_FEATURE_system_zlib:INTERNAL=ON
 QT_FEATURE_systemsemaphore:INTERNAL=ON
 //Qt feature: systemtrayicon (from target Qt6::Gui)
 QT_FEATURE_systemtrayicon:INTERNAL=ON
+//Qt feature: sysv_sem (from target Qt6::Core)
+QT_FEATURE_sysv_sem:INTERNAL=ON
+//Qt feature: sysv_shm (from target Qt6::Core)
+QT_FEATURE_sysv_shm:INTERNAL=ON
 //Qt feature: tabbar (from target Qt6::Widgets)
 QT_FEATURE_tabbar:INTERNAL=ON
 //Qt feature: tabletevent (from target Qt6::Gui)

@@ -1,0 +1,1 @@
+/usr/bin/g++ -DQT_QML_DEBUG -g CMakeFiles/test12.dir/test12_autogen/mocs_compilation.cpp.o CMakeFiles/test12.dir/main.cpp.o CMakeFiles/test12.dir/mainwindow.cpp.o -o test12  /usr/lib/libQt6Widgets.so.6.6.0 /usr/lib/libQt6Gui.so.6.6.0 /usr/lib/libQt6Core.so.6.6.0 /usr/lib/libGLX.so /usr/lib/libOpenGL.so 

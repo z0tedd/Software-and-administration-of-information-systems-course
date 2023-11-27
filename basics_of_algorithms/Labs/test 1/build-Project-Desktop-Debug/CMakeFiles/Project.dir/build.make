@@ -124,9 +124,9 @@ Project: CMakeFiles/Project.dir/Project_autogen/mocs_compilation.cpp.o
 Project: CMakeFiles/Project.dir/main.cpp.o
 Project: CMakeFiles/Project.dir/mainwindow.cpp.o
 Project: CMakeFiles/Project.dir/build.make
-Project: /usr/lib/libQt6Widgets.so.6.5.3
-Project: /usr/lib/libQt6Gui.so.6.5.3
-Project: /usr/lib/libQt6Core.so.6.5.3
+Project: /usr/lib/libQt6Widgets.so.6.6.0
+Project: /usr/lib/libQt6Gui.so.6.6.0
+Project: /usr/lib/libQt6Core.so.6.6.0
 Project: /usr/lib/libGLX.so
 Project: /usr/lib/libOpenGL.so
 Project: CMakeFiles/Project.dir/link.txt

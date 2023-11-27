@@ -175,6 +175,7 @@ CMakeFiles/Project.dir/Project_autogen/mocs_compilation.cpp.o: Project_autogen/m
   /usr/include/c++/13.2.1/cctype \
   /usr/include/c++/13.2.1/cerrno \
   /usr/include/c++/13.2.1/chrono \
+  /usr/include/c++/13.2.1/climits \
   /usr/include/c++/13.2.1/clocale \
   /usr/include/c++/13.2.1/cmath \
   /usr/include/c++/13.2.1/compare \
@@ -260,8 +261,10 @@ CMakeFiles/Project.dir/Project_autogen/mocs_compilation.cpp.o: Project_autogen/m
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/pthread.h \
+  /usr/include/qt6/QtCore/q20functional.h \
   /usr/include/qt6/QtCore/q20memory.h \
   /usr/include/qt6/QtCore/q20type_traits.h \
+  /usr/include/qt6/QtCore/q23utility.h \
   /usr/include/qt6/QtCore/qalgorithms.h \
   /usr/include/qt6/QtCore/qanystringview.h \
   /usr/include/qt6/QtCore/qarraydata.h \
@@ -293,6 +296,7 @@ CMakeFiles/Project.dir/Project_autogen/mocs_compilation.cpp.o: Project_autogen/m
   /usr/include/qt6/QtCore/qflags.h \
   /usr/include/qt6/QtCore/qfloat16.h \
   /usr/include/qt6/QtCore/qforeach.h \
+  /usr/include/qt6/QtCore/qfunctionaltools_impl.h \
   /usr/include/qt6/QtCore/qfunctionpointer.h \
   /usr/include/qt6/QtCore/qgenericatomic.h \
   /usr/include/qt6/QtCore/qglobal.h \
@@ -302,6 +306,7 @@ CMakeFiles/Project.dir/Project_autogen/mocs_compilation.cpp.o: Project_autogen/m
   /usr/include/qt6/QtCore/qiodevicebase.h \
   /usr/include/qt6/QtCore/qiterable.h \
   /usr/include/qt6/QtCore/qiterator.h \
+  /usr/include/qt6/QtCore/qlatin1stringview.h \
   /usr/include/qt6/QtCore/qline.h \
   /usr/include/qt6/QtCore/qlist.h \
   /usr/include/qt6/QtCore/qlogging.h \
@@ -347,6 +352,7 @@ CMakeFiles/Project.dir/Project_autogen/mocs_compilation.cpp.o: Project_autogen/m
   /usr/include/qt6/QtCore/qsystemdetection.h \
   /usr/include/qt6/QtCore/qtaggedpointer.h \
   /usr/include/qt6/QtCore/qtclasshelpermacros.h \
+  /usr/include/qt6/QtCore/qtconfiginclude.h \
   /usr/include/qt6/QtCore/qtconfigmacros.h \
   /usr/include/qt6/QtCore/qtcore-config.h \
   /usr/include/qt6/QtCore/qtcoreexports.h \
@@ -597,6 +603,7 @@ CMakeFiles/Project.dir/main.cpp.o: /home/z0tedd/Documents/university/basics_of_a
   /usr/include/c++/13.2.1/cctype \
   /usr/include/c++/13.2.1/cerrno \
   /usr/include/c++/13.2.1/chrono \
+  /usr/include/c++/13.2.1/climits \
   /usr/include/c++/13.2.1/clocale \
   /usr/include/c++/13.2.1/cmath \
   /usr/include/c++/13.2.1/compare \
@@ -684,8 +691,10 @@ CMakeFiles/Project.dir/main.cpp.o: /home/z0tedd/Documents/university/basics_of_a
   /usr/include/pthread.h \
   /usr/include/qt6/QtCore/QLocale \
   /usr/include/qt6/QtCore/QTranslator \
+  /usr/include/qt6/QtCore/q20functional.h \
   /usr/include/qt6/QtCore/q20memory.h \
   /usr/include/qt6/QtCore/q20type_traits.h \
+  /usr/include/qt6/QtCore/q23utility.h \
   /usr/include/qt6/QtCore/qalgorithms.h \
   /usr/include/qt6/QtCore/qanystringview.h \
   /usr/include/qt6/QtCore/qarraydata.h \
@@ -721,6 +730,7 @@ CMakeFiles/Project.dir/main.cpp.o: /home/z0tedd/Documents/university/basics_of_a
   /usr/include/qt6/QtCore/qflags.h \
   /usr/include/qt6/QtCore/qfloat16.h \
   /usr/include/qt6/QtCore/qforeach.h \
+  /usr/include/qt6/QtCore/qfunctionaltools_impl.h \
   /usr/include/qt6/QtCore/qfunctionpointer.h \
   /usr/include/qt6/QtCore/qgenericatomic.h \
   /usr/include/qt6/QtCore/qglobal.h \
@@ -730,6 +740,7 @@ CMakeFiles/Project.dir/main.cpp.o: /home/z0tedd/Documents/university/basics_of_a
   /usr/include/qt6/QtCore/qiodevicebase.h \
   /usr/include/qt6/QtCore/qiterable.h \
   /usr/include/qt6/QtCore/qiterator.h \
+  /usr/include/qt6/QtCore/qlatin1stringview.h \
   /usr/include/qt6/QtCore/qline.h \
   /usr/include/qt6/QtCore/qlist.h \
   /usr/include/qt6/QtCore/qlocale.h \
@@ -777,6 +788,7 @@ CMakeFiles/Project.dir/main.cpp.o: /home/z0tedd/Documents/university/basics_of_a
   /usr/include/qt6/QtCore/qsystemdetection.h \
   /usr/include/qt6/QtCore/qtaggedpointer.h \
   /usr/include/qt6/QtCore/qtclasshelpermacros.h \
+  /usr/include/qt6/QtCore/qtconfiginclude.h \
   /usr/include/qt6/QtCore/qtconfigmacros.h \
   /usr/include/qt6/QtCore/qtcore-config.h \
   /usr/include/qt6/QtCore/qtcoreexports.h \
@@ -1360,8 +1372,6 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: /home/z0tedd/Documents/university/basic
 
 /usr/include/qt6/QtCore/qpointer.h:
 
-/usr/include/qt6/QtCore/q20functional.h:
-
 /usr/include/qt6/QtGui/qpointingdevice.h:
 
 /usr/include/qt6/QtCore/QVariant:
@@ -1377,8 +1387,6 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: /home/z0tedd/Documents/university/basic
 /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
 /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
-
-/usr/include/c++/13.2.1/climits:
 
 /usr/include/c++/13.2.1/bits/random.tcc:
 
@@ -1612,9 +1620,13 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: /home/z0tedd/Documents/university/basic
 
 /usr/include/qt6/QtCore/q20memory.h:
 
+/usr/include/qt6/QtCore/q20functional.h:
+
 /usr/include/qt6/QtWidgets/qwidget.h:
 
 /usr/include/pthread.h:
+
+/usr/include/locale.h:
 
 /usr/include/qt6/QtCore/qprocessordetection.h:
 
@@ -1766,9 +1778,9 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: /home/z0tedd/Documents/university/basic
 
 /usr/include/bits/mathcalls-narrow.h:
 
-/usr/include/qt6/QtCore/qfunctionaltools_impl.h:
-
 /usr/include/qt6/QtCore/qsharedpointer_impl.h:
+
+/usr/include/qt6/QtCore/qfunctionaltools_impl.h:
 
 /usr/include/c++/13.2.1/backward/binders.h:
 
@@ -1804,9 +1816,9 @@ CMakeFiles/Project.dir/mainwindow.cpp.o: /home/z0tedd/Documents/university/basic
 
 /usr/include/bits/flt-eval-method.h:
 
-/usr/include/qt6/QtCore/q23utility.h:
-
 /usr/include/qt6/QtCore/QObject:
+
+/usr/include/qt6/QtCore/q23utility.h:
 
 /usr/include/bits/types/FILE.h:
 
@@ -2078,9 +2090,9 @@ Project_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 
 /usr/include/bits/atomic_wide_counter.h:
 
-/usr/include/qt6/QtCore/qlatin1stringview.h:
-
 /usr/include/qt6/QtCore/QDebug:
+
+/usr/include/qt6/QtCore/qlatin1stringview.h:
 
 /usr/include/qt6/QtCore/qfloat16.h:
 
@@ -2195,6 +2207,8 @@ Project_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 /usr/include/qt6/QtGui/qfontmetrics.h:
 
 /usr/include/c++/13.2.1/cctype:
+
+/usr/include/c++/13.2.1/climits:
 
 /usr/include/c++/13.2.1/cstdint:
 
@@ -2327,5 +2341,3 @@ Project_autogen/EWIEGA46WW/moc_mainwindow.cpp:
 /usr/include/qt6/QtCore/qcoreevent.h:
 
 /usr/include/linux/limits.h:
-
-/usr/include/locale.h:

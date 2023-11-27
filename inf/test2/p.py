@@ -1,4 +1,5 @@
 from itertools import product
+import random
 m = []
 m2 = []
 m3 = []
@@ -22,7 +23,7 @@ for i in range(1,n):
             k+=1
     if k>=dsuper:
         m2.append(m[i])
-
+random.shuffle(m2)
 def f(x):
     for i in m2:
         if x == i: break
@@ -34,10 +35,11 @@ def f(x):
             m2.remove(i)
 for x in m2:
     f(x)
-for x in m2:
-    f(x)
-for x in m2:
-    f(x)
+
+
+
+
+random.shuffle(m2)
 
 k2= 0
 mbf = []
@@ -47,7 +49,7 @@ for x in (m2):
     mbf.append(x)
     print(''.join([i +' ' for i in x]))
     k2+=1
-
+#print(k2)
 print("Проверочная матрица: ")
 m2 = mbf
 for y in range(n3):
