@@ -21,7 +21,7 @@ bool equal(float a,float b){
 }
 
 
-int super_partition(int first, int last,float* mas,float k){
+int super_partition(int first, int last,vector<float> mas,float k){
 		int e=first,g=first,n=first;
 		int buf =0;
 		//cout <<k;

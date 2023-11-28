@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "QuickSort.h"
 using namespace std;
 int main(){
@@ -6,7 +7,7 @@ int main(){
 		float k;
 		cin>>n;
 		cin >> k;
-		float* mas = new float [n];
+		vector<float> mas(n,0);
 		for (int i=0;i<n;i++){
 				cin>> mas[i];
 		}
@@ -18,10 +19,9 @@ int main(){
 
 			/*
 			*/
-		not_quick_sort(mas,first,last,n);
+		sort(mas.begin(), mas.begin()+last);
 		for (int i=0;i<n;i++){
 				cout << mas[i]<<" ";
 		}
-		//*
-		delete [] mas;
+		//*/
 }
