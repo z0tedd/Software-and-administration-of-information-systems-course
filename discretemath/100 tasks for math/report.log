@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.3)  4 DEC 2023 13:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.4)  4 DEC 2023 23:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -304,7 +304,7 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 Package: babel 2023/02/13 3.86 The Babel package
 \babel@savecnt=\count197
 \U@D=\dimen155
-\l@unhyphenated=\language3
+\l@unhyphenated=\language35
 
 (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
@@ -326,19 +326,10 @@ Package babel Info: Hyphen rules for 'newzealand' set to \l@english
 (/usr/share/texmf-dist/tex/generic/babel-russian/russianb.ldf
 File: russianb.ldf 2021/01/10 1.3m Russian support for the Babel system
 Language: russian 2020/09/09 1.3k Russian support for the Babel system
-
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language 'Russian' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=0 instead on input line 32.
-
-Package babel Info: Hyphen rules for 'russian' set to \l@english
-(babel)             (\language0). Reported on input line 33.
 Package babel Info: Making " an active character on input line 124.
 Package babel Info: Default for \cyrdash is provided on input line 163.
-)) (/usr/share/texmf-dist/tex/generic/babel/locale/ru/babel-russian.tex
+))
+(/usr/share/texmf-dist/tex/generic/babel/locale/ru/babel-russian.tex
 Package babel Info: Importing font and identification data for russian
 (babel)             from babel-ru.ini. Reported on input line 11.
 )
@@ -1604,12 +1595,6 @@ LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 20.74pt on input line 42.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 17.28pt on input line 48.
-
-Overfull \hbox (8.33388pt too wide) in paragraph at lines 55--55
-\T2A/Tempora-TLF/m/n/14.4 бы быть паролем Монокарпа (то есть которые подходят п
-од все описанные
- []
-
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
 
 LaTeX Font Warning: Font shape `T2A/cmr/m/up' undefined
@@ -1680,87 +1665,40 @@ LaTeX Font Warning: Font shape `T2B/cmr/m/up' undefined
 LaTeX Font Warning: Font shape `LGR/cmr/m/up' undefined
 (Font)              using `LGR/cmr/m/n' instead on input line 59.
 
-<<lgr.cmap>>
-Overfull \hbox (26.17685pt too wide) in paragraph at lines 64--64
-[]\T2A/Tempora-TLF/m/n/14.4 Найдем, сколькими способами мы можем выбрать 3 пози
-ции из 6 возможных: 
- []
-
-[1
+<<lgr.cmap>> [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/tempora/t2a-tempora.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-su
-per/cm-super-t2a.enc}]
-Overfull \hbox (32.71301pt too wide) in paragraph at lines 85--85
-[]\T2A/Tempora-TLF/m/n/14.4 Полина составляет 21-буквенные слова из букв слова 
-РЕКОГНОСЦИРОВКА.
+per/cm-super-t2a.enc}] [2] [3]
+Overfull \hbox (13.7043pt too wide) in paragraph at lines 132--133
+[]\T2A/Tempora-TLF/m/n/14.4 Пусть ис-ход-ная хро-мо-со-ма со-сто-ит из n ге-нов
+. Обо-зна-чим их $\OML/cmm/m/it/14.4 a[]; a[]; [] ; a[]$\T2A/Tempora-TLF/m/n/14
+.4 ,
  []
 
-
-Overfull \hbox (7.9882pt too wide) in paragraph at lines 85--85
-[]\T2A/Tempora-TLF/m/n/14.4 РЕКОГНОСЦИРОВКА. Каждая согласная может использоват
-ься сколько
- []
-
-
-Overfull \hbox (28.91573pt too wide) in paragraph at lines 92--95
-\T2A/Tempora-TLF/m/n/14.4 Размещение согласных: Любая согласная может занимать 
-одну из следующих
- []
-
-
-Overfull \hbox (32.53447pt too wide) in paragraph at lines 92--95
-\T2A/Tempora-TLF/m/n/14.4 15 позиций. Имеем 15 перемноженных семјрок (размещени
-я с повторениями)
- []
-
-[2]
-Overfull \hbox (26.3382pt too wide) in paragraph at lines 136--136
-[]\T2A/Tempora-TLF/m/n/14.4 Источник: Дагестанский государственный университет 
-народного хозяйства
- []
-
-
-Overfull \hbox (10.96185pt too wide) in paragraph at lines 138--140
-[]\T2A/Tempora-TLF/m/n/14.4 В театре 10 актеров и 8 актрис. Сколькими способами
- можно распределить
- []
-
-[3]
-Overfull \hbox (18.11287pt too wide) in paragraph at lines 144--146
-\T2A/Tempora-TLF/m/n/14.4 размещения, тогда Ответом на данную задачу будут явля
-ться произведение
- []
-
-
-Overfull \hbox (10.05606pt too wide) in paragraph at lines 169--169
-\T2A/Tempora-TLF/m/n/14.4 этого комитета должен насчитывать восемь членов. Скол
-ькими способами
- []
-
-[4] [5] (./report.aux)
+[4] [5] [6] [7] [8] [9] [10] [11] [12] [13] (./report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 10442 strings out of 477985
- 168423 string characters out of 5840059
- 1855388 words of memory out of 5000000
- 30401 multiletter control sequences out of 15000+600000
+ 10445 strings out of 476953
+ 168475 string characters out of 5822287
+ 1856388 words of memory out of 5000000
+ 30566 multiletter control sequences out of 15000+600000
  537792 words of font info for 67 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 65i,6n,71p,785b,290s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 680 hyphenation exceptions out of 8191
+ 65i,8n,71p,931b,304s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/tempora/Tempora-Regular.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on report.pdf (5 pages, 92488 bytes).
+Output written on report.pdf (13 pages, 112135 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
