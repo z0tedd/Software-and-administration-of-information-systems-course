@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.3)  29 NOV 2023 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.3)  4 DEC 2023 13:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1690,7 +1690,55 @@ Overfull \hbox (26.17685pt too wide) in paragraph at lines 64--64
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/tempora/t2a-tempora.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-su
-per/cm-super-t2a.enc}] [2] [3] (./report.aux)
+per/cm-super-t2a.enc}]
+Overfull \hbox (32.71301pt too wide) in paragraph at lines 85--85
+[]\T2A/Tempora-TLF/m/n/14.4 Полина составляет 21-буквенные слова из букв слова 
+РЕКОГНОСЦИРОВКА.
+ []
+
+
+Overfull \hbox (7.9882pt too wide) in paragraph at lines 85--85
+[]\T2A/Tempora-TLF/m/n/14.4 РЕКОГНОСЦИРОВКА. Каждая согласная может использоват
+ься сколько
+ []
+
+
+Overfull \hbox (28.91573pt too wide) in paragraph at lines 92--95
+\T2A/Tempora-TLF/m/n/14.4 Размещение согласных: Любая согласная может занимать 
+одну из следующих
+ []
+
+
+Overfull \hbox (32.53447pt too wide) in paragraph at lines 92--95
+\T2A/Tempora-TLF/m/n/14.4 15 позиций. Имеем 15 перемноженных семјрок (размещени
+я с повторениями)
+ []
+
+[2]
+Overfull \hbox (26.3382pt too wide) in paragraph at lines 136--136
+[]\T2A/Tempora-TLF/m/n/14.4 Источник: Дагестанский государственный университет 
+народного хозяйства
+ []
+
+
+Overfull \hbox (10.96185pt too wide) in paragraph at lines 138--140
+[]\T2A/Tempora-TLF/m/n/14.4 В театре 10 актеров и 8 актрис. Сколькими способами
+ можно распределить
+ []
+
+[3]
+Overfull \hbox (18.11287pt too wide) in paragraph at lines 144--146
+\T2A/Tempora-TLF/m/n/14.4 размещения, тогда Ответом на данную задачу будут явля
+ться произведение
+ []
+
+
+Overfull \hbox (10.05606pt too wide) in paragraph at lines 169--169
+\T2A/Tempora-TLF/m/n/14.4 этого комитета должен насчитывать восемь членов. Скол
+ькими способами
+ []
+
+[4] [5] (./report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1698,21 +1746,21 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  10442 strings out of 477985
  168423 string characters out of 5840059
- 1854388 words of memory out of 5000000
+ 1855388 words of memory out of 5000000
  30401 multiletter control sequences out of 15000+600000
  537792 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 65i,5n,71p,461b,290s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 65i,6n,71p,785b,290s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/tempora/Tempora-Regular.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb>
-Output written on report.pdf (3 pages, 84957 bytes).
+Output written on report.pdf (5 pages, 92488 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
