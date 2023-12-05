@@ -1,0 +1,66 @@
+import math
+
+def join():
+    return (P[0]+P[1])
+def join1():
+    return (In[0]+In[1])
+
+letter = ["1","7","2","9","3","13","4","8","6","11","5","10","12"]
+
+freq = list(map(float,input().split()))# ввести по-порядку как в таблице
+
+freq_and_letter=dict(zip(letter,freq))
+
+sorted_freq_and_letter={}
+
+freq_and_value=sorted(freq_and_letter.values(),reverse=True)
+
+for i in freq_and_value:
+    for k in freq_and_letter.keys():
+        if freq_and_letter[k]==i and i!=0:
+            sorted_freq_and_letter[k]=freq_and_letter[k]
+
+P=(list(sorted_freq_and_letter.values()))[::-1]
+
+s=P[0]
+cnt=0
+while (s<1):
+    cnt+=1
+    s*=10
+K=[""]*len(P)
+In=[[i] for i in range(len(P))]
+
+while len(P)!=1:
+    n=round(join(),cnt)
+    m=join1()
+    for k in In[0]:
+        K[k]="0"+K[k]
+    for k in In[1]:
+        K[k]="1"+K[k]
+    P.pop(0)
+    P.pop(0)
+    In.pop(0)
+    In.pop(0)
+    i=0
+    P.insert(i, n)
+    i+=1
+    while (i<len(P) and P[i]<P[0]):
+        i+=1
+    P.insert(i,n)
+    P.pop(0)
+    In.insert(i-1,m)
+
+letter_and_code=dict(zip(list(sorted_freq_and_letter.keys()),K[::-1]))
+print("Таблица кодов:")
+print(letter_and_code,"\n")
+
+Haffman=-sum([(i*math.log(i,2)) for i in list(sorted_freq_and_letter.values())])
+print("Энтропия:\n",Haffman,"бит/символ")
+
+length=[len(i) for i in list(letter_and_code.values())]
+Average_length=sum([length[i]*(list(sorted_freq_and_letter.values()))[i] for i in range(len(length))])
+print("\nСредняя длина:\n",Average_length,"бит")
+
+H=1-Haffman/Average_length
+print("\nИзбытоность кода:\n",H*100,"%")
+# Python_3
