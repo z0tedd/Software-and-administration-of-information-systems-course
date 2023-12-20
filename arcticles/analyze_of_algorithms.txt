@@ -1,0 +1,29 @@
+﻿https://petr-panda.ru/copywriting-terms/kompilyaciya-stati/
+
+bug_bounty
+1)https://habr.com/ru/companies/rvision/articles/560448/
+
+
+C++ initialization
+1)https://habr.com/ru/articles/438492/
+2)https://habr.com/ru/sandbox/153128/
+
+Algorithms
+-2)http://e-maxx.ru/algo/
+-1)https://wiki.algocode.ru/index.php?title=%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%B2%D1%81%D0%B5%D1%85_%D0%BA%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D0%B9
+0) https://habr.com/ru/articles/335920/
+1) https://habr.com/ru/articles/510970/
+2) https://gocoding.org/ru/%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0-%D0%B4%D0%BB%D1%8F-%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8-bogo-%D1%81-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC-python/
+
+Travelling salesman problem
+1)https://habr.com/ru/articles/774754/
+2)https://habr.com/ru/articles/560468/
+3)https://moluch.ru/archive/55/7474/
+
+
+Math stat
+https://greysoft.gitbooks.io/theory-of-probability/content/
+
+Music
+https://habr.com/ru/articles/364031/
+https://blog.nimsound.ru/video-sound-guides/
