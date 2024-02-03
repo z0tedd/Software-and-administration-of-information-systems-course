@@ -54,13 +54,13 @@ int main(){
         a[i] = new int [SiZe];
         for (int j=0;j<SiZe;j++){
             cin >> a[i][j];
-            cout << a[i][j] << " ";
+            //cout << a[i][j] << " ";
         }
-        cout << "\n";
+       // cout << "\n";
     }
     int buf = 0;
     int Step = SiZe/2;
-    cout << Step <<"\n";
+    //cout << Step <<"\n";
     for (int i=0;i<Step+1;i++){
         for (int j=0;j<Step+1;j++){
             if (i >= j){
