@@ -18,6 +18,15 @@ for (int i =0;i<n;i++){
 	}
 }
 
+void deleteMatrix(int ** mas, int n){
+	for (int i = 0;i<n;i++){
+		delete [] mas[i];
+	}
+	delete [] mas;
+
+
+}
+
 int main(){
 	int n;
 	cin >> n;
@@ -98,7 +107,7 @@ for (int k = 1, i = 0, j = 0; k <= n; k++)
 */
 	//}
 	drawMatrix(mas, n);
-
+	deleteMatrix(mas,n);
 
 return 0;
 }

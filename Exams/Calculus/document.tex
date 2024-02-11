@@ -1,0 +1,247 @@
+\documentclass[a4paper,14pt]{extreport} % добавить leqno в [] для нумерации слева
+
+%\usepackage[14pt]{extsizes}
+\linespread{1.45} %полуторный интервал
+\usepackage[left=3cm,right=1.5cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{titlesec}
+%%% Работа с русским языком
+\titleformat{\section}{\normalfont\bfseries}{\thechapter}{14pt}{\bfseries}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{ fancyhdr} % улучшенная нумерация страниц
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+%\renewcommand{\sfdefault}{cmss}
+\usefont{T2A}{cmss}{m}{n}
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+\usepackage{enumitem}  % Классные списки
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+\usepackage{tempora}
+%\renewcommand{\sfdefault}{cmss}
+
+%%% Заголовок
+\title{100 Задач по теме "Комбинаторика}
+\author{Антон Файтельсон}
+\date{}
+\newtheorem{definition}{Определение}
+\newtheorem*{Help}{Краткая сводка}
+
+\begin{document}
+\begin{flushleft}
+	\Large  Конспект к билетам по мат. анализу	\\
+	Выполнил великий и могучий Файтельсон Антон
+\end{flushleft}
+
+\begin{center}
+	\begin{enumerate}
+		\item Аксиоматическое определение множества действительных чисел. Свойство полноты.\\
+		\begin{definition}\label{Аксиоматика}
+			Множество $\mathbb {R} $ называется множеством действительных (вещественных) чисел, а его элементы — действительными (вещественными) числами, если выполнен следующий комплекс условий, называемый
+			аксиоматикой вещественных чисел:
+		\end{definition}
+		%Краткая сводка
+		\begin{Help}
+			Закон (правило) f, посредством которого каждому a $\in$ A сопоставляется единственный b $\in$ B, называют отображением. Обычно это записывают так: b = f(a) или f: A $\rightarrow$ B (отображение из A в B). 
+		\end{Help}
+		%Начало Аксиом
+		\begin{enumerate}[label=(\Roman*)]
+			\item Аксиомы сложения\\
+			
+			Определено отображение (Операция сложения)
+			\begin{equation}
+				+: \mathbb {R} \times \mathbb {R} \rightarrow \mathbb {R},
+			\end{equation}
+			сопоставляющее каждой упорядоченной паре (x, y) элементов x, y из $\mathbb {R}$
+			некоторый элемент x  y $\in \mathbb {R}$ , называемый суммой x и y. При этом выполнены следующие условия:
+	
+			\begin{itemize}
+				\item Нейтральный элемент(называемый в случае сложения нулем)
+				\begin{center}
+					$\forall x \in \mathbb{R}: \exists\space0: x+0=0+x=x$
+				\end{center}
+				
+				\item Противоположный элемент
+				\begin{center}
+					$\forall x \in \mathbb{R}: \exists (-x) \in \mathbb{R}: x+(-x)=(-x)+x=0$
+				\end{center}
+				
+				\item Ассоциативность
+				\begin{center}
+					$\forall x,y,z \in \mathbb{R}: x+(y+z)=(x+y)+z$
+				\end{center}
+				\newpage
+				\item Коммунитативность
+				\begin{center}
+					$\forall x,y \in \mathbb{R}: x+y=y+x$
+				\end{center}
+			\end{itemize}
+		
+		
+		%Нужно привести сравнение ассоциативности и коммунитативности с бананоми и строками,чтобы можно ьыло понять
+			\item Аксиомы умножения\\
+			
+			Определено отображение (Операция умножения)
+			\begin{equation}
+				\bullet: \mathbb {R} \times \mathbb {R} \rightarrow \mathbb {R},
+			\end{equation}
+			сопоставляющее каждой упорядоченной паре (x, y) элементов x, y из $\mathbb {R}$
+			некоторый элемент x $\bullet$ y $\in \mathbb {R}$ , называемый произведением x и y. При этом выполнены следующие условия:
+			
+			\begin{itemize}
+				\item Нейтральный элемент(называемый в случае умножения единицей)
+				\begin{center}
+					$\forall x \in \mathbb{R}: \exists1\in \mathbb{R}\textbackslash0: x\cdotp1=1\cdotp x=x$
+				\end{center}
+				
+				\item Обратный элемент
+				\begin{center}
+					$\forall x \in \mathbb{R}\textbackslash0: \exists x^{-1} \in \mathbb{R}: x\cdotp x^{-1} =x^{-1}\cdotp x = 1 $
+				\end{center}
+				
+				\item Ассоциативность
+				\begin{center}
+					$\forall x,y,z \in \mathbb{R}: x\cdotp(y\cdotp z)=(x\cdotp y)\cdotp z$
+				\end{center}
+				
+				\item Коммунитативность
+				\begin{center}
+					$\forall x,y \in \mathbb{R}: x\cdotp y=y \cdotp x$
+				\end{center}
+			\end{itemize}
+			
+			\item[(I, II)] Связь сложения и умножения (Дистрибутивность умножения к сложению)
+				\begin{center}
+					$\forall x,y,z \in \mathbb{R}: (x+y)z=xz+yz$
+				\end{center}
+			\item Аксиомы порядка\\
+			Между элементами $\mathbb{R}$ имеется отношение $\leq$, т.е. для элементов x, y из $\mathbb{R}$ 
+			установлено, выполняется ли x $\leq$ y или нет. При этом должны удолетворяться следующие условия:
+			\begin{itemize}
+				\item $\forall x \in \mathbb{R} (x\leq x)$
+				\item $(x\leq y) \land (y\leq x) \Rightarrow (x = y)$
+				\item $(x\leq y) \land (y\leq z) \Rightarrow (x \leq z)$
+				\item $\forall x \in \mathbb{R} \hspace{5px} \forall y \in \mathbb{R} \hspace{5px} (x\leq y) \lor (y \leq x)$\\
+				Отношение $\leq$ в $\mathbb{R}$ называется отношением неравенства.
+			\end{itemize}
+			
+			\item[(I, III)] Связь сложения и порядка в $\mathbb{R}$ 
+			\begin{center}
+				$\forall x,y,z \in \mathbb{R}: (x\leq y) \Rightarrow (x+z \leq y+z)$
+			\end{center}
+			
+			\item[(II, III)] Связь умножения и порядка в $\mathbb{R}$ 
+			\begin{center}
+				$\forall x,y \in \mathbb{R}: (0 \leq x) \land (0 \leq y) \Rightarrow (0 \leq x\cdotp y)$
+			\end{center}
+			
+			\item Аксиома полноты(непрерывности)\\
+			Если X и Y — непустые подмножества $\mathbb{R}$, обладающие тем свойством, что для любых элементов x $\in$ X и y $\in$ Y выполнено x $\leq$ y, то $\exists c \in \mathbb{R}$, что 
+			$x\leq c\leq y$ для любых элементов x $\in$ X и y $\in$ Y.\\
+			Определение через кванторы(мне было весело это писать):
+			\begin{center}
+				$\forall x \in X, y \in Y : x\leq y \Rightarrow \exists c \in \mathbb{R}: x\leq c\leq y $
+			\end{center}
+			%, что для любых элементов x ∈ X
+			%и y ∈ Y выполнено x ∂ y, то существует такое c ∈ R, что x ∂ c ∂ y для любых
+			%элементов x ∈ X и y ∈ Y .
+		\end{enumerate}
+		
+		
+		\item Следствия из аксиом множества действительных чисел.\\
+		\textbf{Замечание.} Следствий много, и поэтому часть из них не будет представлено, я хз какие будут на экзамене.
+		\begin{enumerate}
+			\item Cледствия аксиом сложения
+			\begin{itemize}
+				\item В множестве действительных чисел имеется только один нуль.
+				\begin{proof}
+					Если $0_1$ и $0_2$ — нули в $\mathbb{R}$, то по определению нуля
+					\begin{equation}
+						0_1 = 0_1 + 0_2 = 0_2 + 0_1 = 0_2
+					\end{equation}
+				\end{proof}
+				
+				\item В множестве действительных чисел у каждого элемента имеется единственный противоположный элемент.
+				\begin{proof}
+					Если $x_1$ и $x_2$ — элементы, противоположные x $\in \mathbb{R}$, то
+					\begin{equation}
+						x_1 = x_1 + 0 = x_1 + (x+x_2) = (x_1+x) + x_2 = 0 + x_2 = x_2
+					\end{equation}
+				\end{proof}
+				
+				\item Уравнение $a + x = b$ в $\mathbb{R}$ имеет единственное решение:
+				\begin{center}
+					$x = b + (-a)$
+				\end{center}
+				\begin{proof}
+					Это вытекает из существования и единственности у каждого элемента
+					a $\in \mathbb{R}$ противоположного ему элемента:
+					\begin{multline*}
+						(a+x=b) \Leftrightarrow ((x+a)+(-a) = b + (-a)) \Leftrightarrow \\
+						\Leftrightarrow (x+ (a + (-a)) = b+ (-a)) \Leftrightarrow \\
+						\Leftrightarrow (x+0 = b+(-a)) \Leftrightarrow (x = b + (-a))
+					\end{multline*}
+				\end{proof}
+			\end{itemize}
+			
+			\item Следствия аксиом умножения
+			
+			\begin{itemize}
+				\item В множестве действительных чисел имеется только одна единица.
+				\item Для каждого числа x $\neq$ 0 имеется только один обратный элемент $x^{-1}$.
+				\item Уравнение a$\cdotp$x = b при a $\in \mathbb{R}\textbackslash0$ имеет притом единственное решение x = b $\cdotp a^{-1}$\\
+				\textbf{Замечание.} Доказательства? Нахуй они нужны? Скопируй с верхних следствий епта, если так нужны
+			\end{itemize}
+			\item Следствия аксиомы связи сложения и умножения
+			\begin{itemize}
+				\item $\forall x \in \mathbb{R}: x\cdotp 0 = 0 \cdotp x = 0$
+				\begin{proof}
+					$
+						(x\cdotp 0 = x\cdotp (0 + 0) = x\cdotp 0 + x\cdotp 0) \Rightarrow $\\
+					$	\Rightarrow (x\cdotp 0 = x\cdotp 0 + 0 = x\cdotp 0 + x\cdotp 0 + (-x)\cdotp 0= 
+					x\cdotp 0 + (-x)\cdotp 0 = 0)$\\
+				\end{proof}
+				\item $x\cdotp y = 0 \Rightarrow (x=0)\lor (y=0)$
+				\begin{proof}
+					Если, например, y $\neq$ 0, то из единственности решения уравнения x $\cdotp$ y = 0
+					относительно х находим х = 0 $\cdotp$ $y^{-1}$ = 0
+				\end{proof}
+				\item $\forall x \in \mathbb{R}: -x = (-1)\cdotp x$
+				\begin{proof}
+					$ x + (-1) \cdotp x = (1 + (-1)) \cdotp x = 0 \cdotp x = x \cdotp 0 = 0 = x + (-x)$, и утверждение следует из единственности противоположного элемента.
+				\end{proof}
+				\item $\forall x \in \mathbb{R}: (-1)(-x) = x$
+				\begin{proof}
+					Следует из предыдущего док-ва и единственности противоположного элемента.
+				\end{proof}
+				\item $\forall x \in \mathbb{R}: (-x)(-x) = x\cdotp x$
+				\begin{proof}
+					$(-x)(-x) = ((-1) \cdotp x)(-x) = $\\
+					$= (x \cdotp (-1))(-x) 	 = x((-1)(-x)) = x \cdotp x$
+				\end{proof}
+			\end{itemize}
+			\item  Следствия аксиом порядка.
+			
+			\begin{Help}
+				
+			\end{Help}}
+		\end{enumerate}
+	\end{enumerate}
+\end{center}
+
+\end{document}
