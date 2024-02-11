@@ -1,24 +1,20 @@
+
 #include <iostream>
-#include <algorithm>
-#include <string>
+#include <vector>
+#include <math.h>
 using namespace std;
-int main(){
-	int n, x =0;
-	cin >> n;
-	string a;
-	int buf;
-	for (int i=0;i<n;i++){
-		cin >> a;
-		buf =count(a.begin(), a.end(), '+');
-		if (buf == 2){
-			x++;
-		}
-		else{
-			x--;
-		}
-	}
-	cout << x;
 
-
-	return 0;
+int main()
+{
+    long long int x;
+    cin >> x;
+    cout << x << " ";
+    int i = 0;
+    while(x != 1){
+        if (x%2==0) x/=2;
+        else x = 3*x + 1;
+        cout <<x << " ";
+       
+    }
+    return 0;
 }
