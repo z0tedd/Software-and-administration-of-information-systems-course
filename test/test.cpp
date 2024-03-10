@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
 {
     srand(time(0));
     int N = 10;
-    int Size = 10;
+    int Size = 9;
     long double clc = 0;
     if (ofstream fout("QWERT.csv"); fout.is_open())
     {
