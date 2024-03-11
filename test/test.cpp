@@ -2,11 +2,100 @@
 #include <ctime>
 #include <cstdlib>
 #include <cmath>
+#include <vector>
 #include <fstream>
+#include <set>
 using namespace std;
+void treesort(int* l, int* r) {
+	multiset<int> m;
+	for (int *i = l; i < r; i++)
+		m.insert(*i);
+	for (int q : m)
+		*l = q, l++;
+}
+void insertionsort(int* l, int* r) {
+	for (int *i = l + 1; i < r; i++) {
+		int* j = i;
+		while (j > l && *(j - 1) > *j) {
+			swap(*(j - 1), *j);
+			j--;
+		}
+	}
+}
+
 void quicksort(int* l, int* r);
 long double Test(int test_number);
-
+template <class T>
+class heap {
+public:
+	int size() {
+		return n;
+	}
+	int top() {
+		return h[0];
+	}
+	bool empty() {
+		return n == 0;
+	}
+	void push(T a) {
+		h.push_back(a);
+		SiftUp(n);
+		n++;
+	}
+	void pop() {
+		n--;
+		swap(h[n], h[0]);
+		h.pop_back();
+		SiftDown(0);
+	}
+	void clear() {
+		h.clear();
+		n = 0;
+	}
+	T operator [] (int a) {
+		return h[a];
+	}
+private:
+	vector<T> h;
+	int n = 0;
+	void SiftUp(int a) {
+		while (a) {
+			int p = (a - 1) / 2;
+			if (h[p] > h[a]) swap(h[p], h[a]);
+			else break;
+			a--; a /= 2;
+		}
+	}
+	void SiftDown(int a) {
+		while (2 * a + 1 < n) {
+			int l = 2 * a + 1, r = 2 * a + 2;
+			if (r == n) {
+				if (h[l] < h[a]) swap(h[l], h[a]);
+				break;
+			}
+			else if (h[l] <= h[r]) {
+				if (h[l] < h[a]) {
+					swap(h[l], h[a]);
+					a = l;
+				}
+				else break;
+			}
+			else if (h[r] < h[a]) {
+				swap(h[r], h[a]);
+				a = r;
+			}
+			else break;
+		}
+	}
+};
+void heapsort(int* l, int* r) {
+	heap<int> h;
+	for (int *i = l; i < r; i++) h.push(*i);
+	for (int *i = l; i < r; i++) {
+		*i = h.top();
+		h.pop();
+	}
+}
 
 void merge(int* l, int* m, int* r, int* temp) {
 	int *cl = l, *cr = m, cur = 0;
@@ -37,9 +126,9 @@ int main(int argc, char* argv[])
 {
     srand(time(0));
     int N = 10;
-    int Size = 9;
+    int Size =4;
     long double clc = 0;
-    if (ofstream fout("mergesorttest.csv"); fout.is_open())
+    if (ofstream fout("inssorttest.csv"); fout.is_open())
     {
         
         for (int i=0;i<N;i++){
@@ -71,7 +160,10 @@ long double Test(int test_number){
   }
 
   unsigned long long start_time =  clock();
-  mergesort(array, array + test_number);
+  //mergesort(array, array + test_number);
+  insertionsort(array, array + test_number);
+  //treesort(array, array + test_number);
+  //heapsort(array, array + test_number);
   //quicksort(array, array+test_number);
   unsigned int end_time = clock(); // конечное время 
 
