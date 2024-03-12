@@ -5,7 +5,71 @@
 #include <vector>
 #include <fstream>
 #include <set>
+#include "sort.h"
+
+#define SORT_NAME sorter
+#define SORT_TYPE int
 using namespace std;
+  
+struct Node 
+{ 
+    int key; 
+    struct Node *left, *right; 
+}; 
+  
+// A utility function to create a new BST Node 
+struct Node *newNode(int item) 
+{ 
+    struct Node *temp = new Node; 
+    temp->key = item; 
+    temp->left = temp->right = NULL; 
+    return temp; 
+} 
+  
+// Stores inorder traversal of the BST 
+// in arr[] 
+void storeSorted(Node *root, int arr[], int &i) 
+{ 
+    if (root != NULL) 
+    { 
+        storeSorted(root->left, arr, i); 
+        arr[i++] = root->key; 
+        storeSorted(root->right, arr, i); 
+    } 
+} 
+  
+/* A utility function to insert a new 
+   Node with given key in BST */
+Node* insert(Node* node, int key) 
+{ 
+    /* If the tree is empty, return a new Node */
+    if (node == NULL) return newNode(key); 
+  
+    /* Otherwise, recur down the tree */
+    if (key < node->key) 
+        node->left  = insert(node->left, key); 
+    else if (key > node->key) 
+        node->right = insert(node->right, key); 
+  
+    /* return the (unchanged) Node pointer */
+    return node; 
+} 
+  
+// This function sorts arr[0..n-1] using Tree Sort 
+void treeSort(int *arr, int n) 
+{ 
+    struct Node *root = NULL; 
+  
+    // Construct the BST 
+    root = insert(root, arr[0]); 
+    for (int i=1; i<n; i++) 
+        root = insert(root, arr[i]); 
+  
+    // Store inorder traversal of the BST 
+    // in arr[] 
+    int i = 0; 
+    storeSorted(root, arr, i); 
+} 
 void treesort(int* l, int* r) {
 	multiset<int> m;
 	for (int *i = l; i < r; i++)
@@ -126,23 +190,23 @@ int main(int argc, char* argv[])
 {
     srand(time(0));
     int N = 10;
-    int Size =4;
+    int Size =8;
     long double clc = 0;
-    if (ofstream fout("inssorttest.csv"); fout.is_open())
+    if (ofstream fout("newtreesorttest.csv"); fout.is_open())
     {
-        
+
         for (int i=0;i<N;i++){
           for (int j = 0;j<Size;j++){
             clc = Test(pow(10,j+1));
             cout <<  clc << '\t';  
-            
+
             fout <<clc  << '\t';  
           }
           cout << '\n';
           fout <<'\n';
         }
         fout.close();
-    
+
     }
    else cout << "QWERT.csv не открыт\n"; 
 
@@ -161,7 +225,9 @@ long double Test(int test_number){
 
   unsigned long long start_time =  clock();
   //mergesort(array, array + test_number);
-  insertionsort(array, array + test_number);
+  treeSort(array, test_number);
+  //sorter_heap_sort(array, test_number);
+  //insertionsort(array, array + test_number);
   //treesort(array, array + test_number);
   //heapsort(array, array + test_number);
   //quicksort(array, array+test_number);
