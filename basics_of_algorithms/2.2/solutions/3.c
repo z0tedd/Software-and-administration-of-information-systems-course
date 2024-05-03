@@ -1,57 +1,51 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-char * strdifffunc(char * str){
-  char del[] = {" "};
-  char* Half = strtok(str, del);
-  char* New = (char*)malloc(sizeof(char)*strlen(str));
-  while (Half!=NULL){
-    strcat(New, Half);
-    Half = strtok(NULL, del);
-  }
-  return New;
+#define SIZE 128
 
-}
 char * strdiffc(char * str){
-  char del = ' ';
-  char * it = str;
-  int CountDelimiters = 0;
-  while ((*it) != '\0'){ // NULL summon warning, i dunno why
-    if ((*it) == ' ') CountDelimiters++;
-    it++;
-  }
-  //printf("%s %s",it,str);
-  char* New = (char *)malloc(sizeof(char)*(it - str-CountDelimiters));
-  ///*
-  ///
-  //printf("%d %d %d %d", strlen(New),strlen(str),CountDelimiters,(it - str-CountDelimiters));
-  char* itStr;
-  itStr = str;
-  char* itNew = New;
-  while ((*itStr) !=  '\0'){
-    if ((*itStr) == del){
-      itStr++;
-     // printf("%c", *itStr);
-      continue;
+    //bool megamas[SIZE];
+
+    bool *megamas = (bool*)malloc(sizeof(bool)*SIZE);
+    for (bool* it = megamas;(size_t)(it-megamas)<SIZE; it++ ){
+       *it = 0;
     }
-    (*itNew) = (*itStr);
-    //printf("%c %c ", *itNew, *itStr);
-    itNew++;itStr++;
-  }
-//*/
-  *(itNew--) = '\0';
-  //printf("||%c||",*(itNew-1));
-  return New;
+    int n = 0;
+    char * it = str;
+    while ((*it) != '\0'){ // NULL summon warning, i dunno why
+      if (!(*(megamas+int(*it)))){
+        *(megamas+int(*it)) = 1;
+        //megamas[int(*it)] = 1;
+        n++;
+      } 
+      it++;
+    }
+    char * New = (char*)malloc(sizeof(char)*n+1);
+    char * itstr = New; 
+    for (bool* it = megamas;(size_t)(it- megamas)<SIZE; it++ ){
+      if (*it){
+        *itstr = (char)(it-megamas);
+        itstr++;
+      }
+    }
+    *(New+n)='\0';
+  /*
+    for (int i=0;i<strlen(New);i++){
+    
+    printf("-----%c---%d---%d\n",New[i],i,int(New[i])); 
+  }*/
+    //printf("%d\n",strlen(New));
+
+    return New;
 }
 
 int main(){
-  char* str = NULL;
-  size_t n;
-  getline(&str, &n,stdin);
-  //n = strlen(str);
-  //printf("%s %zu " , str,n);
+  char * str = NULL;
+  size_t n; 
+  getline(&str,&n,stdin);
+  char*New = strdiffc(str);
+  printf("%s",New);
 
-  char* FalseNew = strdiffc(str);
-  printf("%s",FalseNew);
+
   return 0;
 }

@@ -1,0 +1,1 @@
+/usr/bin/g++ -DQT_QML_DEBUG -g CMakeFiles/3.dir/3_autogen/mocs_compilation.cpp.o CMakeFiles/3.dir/main.cpp.o -o 3  /usr/lib/libQt6Core.so.6.7.0

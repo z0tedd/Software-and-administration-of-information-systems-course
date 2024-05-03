@@ -1,0 +1,9 @@
+/home/z0tedd/Documents/university/basics_of_algorithms/2.3/solutions/3/build/Desktop-Debug/CMakeFiles/3.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/2.3/solutions/3/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/2.3/solutions/3/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/2.3/solutions/3/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/2.3/solutions/3/build/Desktop-Debug/CMakeFiles/install.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/2.3/solutions/3/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/2.3/solutions/3/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/2.3/solutions/3/build/Desktop-Debug/CMakeFiles/3_autogen_timestamp_deps.dir
+/home/z0tedd/Documents/university/basics_of_algorithms/2.3/solutions/3/build/Desktop-Debug/CMakeFiles/3_autogen.dir
