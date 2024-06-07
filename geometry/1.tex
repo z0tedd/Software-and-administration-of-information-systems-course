@@ -1,0 +1,137 @@
+\documentclass[a4paper,14pt]{extreport} % добавить leqno в [] для нумерации слева
+%\usepackage[14pt]{extsizes}
+\usepackage[left=3cm,right=1.5cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\linespread{1.45} %полуторный интервал
+\usepackage{titlesec}
+%%% Работа с русским языком
+%\titleformat{\section}{\normalfont\bfseries}{\thechapter}{14pt}{\bfseries}
+\usepackage{microtype}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{ fancyhdr} % улучшенная нумерация страниц
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+%\renewcommand{\sfdefault}{cmss}
+\usefont{T2A}{cmss}{m}{n}
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%\renewcommand{\sfdefault}{cmss}
+\usepackage{tempora}
+%%% Заголовок
+\title{Краткий конспект по геометрии}
+\author{}
+\date{}
+\begin{document}
+\section{Плоскость} 
+  \subsection{Уравнения}
+  \begin{enumerate}
+    \item Уравнение плоскости, проходящей через заданную точку $М_0\{x_0.y_0,z_0\}$ перпендикулярно заданному вектору   $\vec{N} = \{A,B,C\}$ 
+    \[
+      A(x-x_0) + B(y-y_0) + C(z-z_0) = 0
+    \]
+    \item Общее уравнение плоскости
+      \[
+        Ax + By + Cz + D = 0, \text{где $\vec{N} = \{A,B,C\}$ - вектор нормали}
+      \]
+    \item Уравнение плоскости "в отрезках"
+      \[
+        \frac{x}{a} + \frac{y}{b} + \frac{z}{c} = 1
+      \]
+    \item Уравнение плоскости, проходящей через три заданные точки\\
+      $M_1\{x_1,y_1,z_1\}, M_2\{x_2,y_2,z_2\}, M_3\{x_3,y_3,z_3\}$
+      \begin{align}
+       &\overrightarrow{M_1M} = \{x-x_1;y-y_1;z-z_1\} \\
+       &\overrightarrow{M_1M_2} = \{x_2-x_1;y_2-y_1;z_2-z_1\}  \\
+       &\overrightarrow{M_1M_3} = \{x_3-x_1;y_3-y_1;z_3-z_1\}
+      \end{align}
+      Условие компланарности векторов:
+
+        \begin{center}
+          $ ( \overrightarrow{M_1M} \cdot \overrightarrow{M_1M_2} \cdot \overrightarrow{M_1M_3}) = 0  \Leftrightarrow $
+          $\begin{vmatrix}
+            x-x_1&y-y_1&z-z_1\\ 
+            x_2-x_1&y_2-y_1&z_2-z_1\\
+            x_3-x_1&y_3-y_1&z_3-z_1
+          \end{vmatrix}$
+        \end{center}
+
+  \end{enumerate}
+  \subsection{Необходимая информация}
+      Важные св-ва плоскостей:
+      \begin{itemize}
+        \item Если в уравнении плоскости отсутствует одна переменная, то плоскость проходит параллельно той оси координат, переменной которой нет в уравнении.
+        \item Если в уравнении плоскости отсутствует свободный коэффициент , то плоскость проходит через начало координат.
+        \item Если в уравнении плоскости отсутствуют две переменные, то плоскость проходит параллельно координатной плоскости, переменных которой нет в уравнении.\\
+          Уравнения координатных плоскостей:
+          \begin{center}
+          x = 0 - уравнение плоскости YOZ \\ 
+          y = 0 - уравнение плоскости XOZ \\ 
+          z = 0 - уравнение плоскости XOY \\
+          \end{center}
+      \end{itemize}
+      Взаимное расположение плоскостей:
+      \begin{itemize}
+                \item Условие параллельности плоскостей
+        $$
+        \overrightarrow{N_1} \| \overrightarrow{N_2}  \Longleftrightarrow  \frac{A_1}{A_2}=\frac{B_1}{B_2}=\frac{C_1}{C_2}
+        $$
+        \item Условие перпендикулярности плоскостей
+        $$
+        \begin{array}{ll}
+        &\overrightarrow{N_1} \perp \overrightarrow{N_2} \Leftrightarrow \left(\overrightarrow{N_1} \cdot \overrightarrow{N_2}\right)=0 \\
+
+        & A_1 \cdot A_2+B_1 \cdot B_2+C_1 \cdot C_2=0
+        \end{array}
+        $$
+        \item Косинус угла между плоскостями
+
+        Угол между плоскостями - это угол между векторами нормалей этих плоскостей
+        $$
+        \cos \varphi=\cos \left(\overrightarrow{N_1}, \vec{N}_2\right)=\frac{A_1 \cdot A_2+B_1 \cdot B_2+C_1 \cdot C_2}{\sqrt{A_1^2+B_1^2+C_1^2} \cdot \sqrt{A_2^2+B_2^2+C_2^2}}
+        $$
+      \end{itemize}
+      Расстояние от точки до плоскости\\
+      Расстояние от точки $M_1\left(x_1 ; y_1 ; z_1\right)$ до плоскости $A x+B y+C z+D=0 \quad$ находится по формуле:
+      $$
+      d=\frac{\left|A x_1+B y_1+C z_1+D\right|}{\sqrt{A^2+B^2+C^2}}
+      $$
+      Расстояние - это длина перпендикуляра, опущенного из точки на плоскость 
+      Взаимное расположение прямой и плоскости в пространстве:
+      \begin{itemize}
+        \item Условие параллельности прямой и плоскости
+        $$
+        \begin{array}{ll}
+        \vec{s} \perp \vec{N} \quad(\vec{N} \cdot \vec{s})=0 \\
+        A m+B n+C p=0\\
+        \end{array}
+        $$
+        \item Условие перпендикулярности прямой и плоскости
+        $$
+        \vec{N} \| \vec{s} \quad \frac{A}{m}=\frac{B}{n}=\frac{C}{p}
+        $$
+      \item Нахождение угла между прямой и плоскостью\\
+        Углом между прямой и плоскость называется угол между этой прямой и ее ортогональной проекцией на эту плоскость.\\
+        Из уравнений прямой и плоскости известны направляющий вектор прямой и вектор нормали плоскости.
+        Угол между этими векторами - $\alpha$.\\
+        Так как в сумме углы дают 90 градусов, а значит $\cos \alpha=\sin \varphi$ Поэтому при нахождении угла между прямой и плоскостью находят не косинус, а синус угла. Так как синус угла между прямой и плоскостью может быть только положительным, то:
+        $$
+        \sin \varphi=\frac{|(\vec{N} \cdot \vec{s})|}{|\vec{N}| \cdot|\vec{s}|}=\frac{|A m+B n+C p|}{\sqrt{A^2+B^2+C^2} \cdot \sqrt{m^2+n^2+p^2}}
+        $$
+      \end{itemize}
+\end{document}

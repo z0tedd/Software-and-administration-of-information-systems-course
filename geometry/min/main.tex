@@ -1,0 +1,276 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[left=3cm,right=1.5cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{tikz}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+
+% \section*{Задача 5}
+%
+% \begin{minipage}[t]{0.45\textwidth}
+%
+% \textbf{Дано:}
+% \textbf{Найти: }
+% \end{minipage}
+% \begin{minipage}[t]{0.45\textwidth}
+%   \vspace{-\baselineskip} % Required for vertically aligning minipages
+%
+% \begin{center}
+% \begin{tikzpicture}
+%     \draw[thick] (0,0) node[left] {$A$} -- (2,2) node[above] {$B$} -- (4,0) node[right] {$C$} -- cycle;
+%     \draw[dashed] (2,2) -- (2,0) node[below] {$H$};
+% \end{tikzpicture}
+% \end{center}
+% \end{minipage}
+% \\
+% \textbf{Решение:}
+% \begin{enumerate}
+% \end{enumerate}
+%
+% \textbf{Oтвет: }2 
+\begin{document}
+\section*{Задача 1}
+\begin{minipage}[t]{0.45\textwidth}
+\textbf{Дано:}\\
+A(1, 2)\\
+B(4, 4)\\
+C(2, -2)\\
+\textbf{Составить:} ур-ние медианы треугольника $ABC$, проходящую через вершину $A$.
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick] (0,0) node[left] {$C$} -- (2,2) node[above] {$A$} -- (4,0) node[right] {$B$} -- cycle;
+    \draw[dashed] (2,2) -- (2,0) node[below] {$M$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+
+\item Пусть $AM$ -- медиана, тогда точка $M$ -- середина отрезка $BC$, значит:
+\[
+M\left(\frac{4 + 2}{2}, \frac{4 + (-2)}{2}\right) = M(3, 1)
+\]
+
+\item $\overline{AM}: \{2, -1\}$, $ M(3,1)$ $\Rightarrow AM: \frac{x-3}{2} = \frac{y-1}{-1}$
+\end{enumerate}
+\textbf{Oтвет:} $\frac{x-3}{2} = \frac{y-1}{-1}$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Задача 2}
+\begin{minipage}[t]{0.45\textwidth}
+   
+\textbf{Дано:}
+
+$M(8, 11)$\\
+$l: 2x + 3y + 3 = 0$\\
+
+
+\textbf{Найти:} точку симметричную $M$ относительно $l$.\\
+
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick] (0,-1) -- (3,1.5) node[right] {$e$};
+    \fill (1,1) circle (2pt) node[above] {$M$};
+    \fill (2,0) circle (2pt) node[below] {$M'$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item Из уравнения прямой $l$ получаем вектор нормали:
+\[
+  2x + 3y + 3 = 0 \Rightarrow \overline{n} \{2, 3\}
+\]
+
+\item Вектор нормали будет являться направляющим вектором к\\ прямой $MM'$,где  $M'$ - искомая точка.
+  \[
+    \text{Ур-ние $MM`$:} 
+    \begin{cases}
+       2t + 8 = x\\ 
+       3t + 11 = x
+    \end{cases}
+    \Rightarrow 
+    \begin{cases}
+      t = \frac{x}{2} - 4\\ 
+      t= \frac{x}{3} - \frac{11}{3}
+    \end{cases}
+    \Rightarrow 
+    x/2 - y/3 - 1/3 = 0
+  \]
+  ММ`: 3x - 2y - 2 = 0 
+  \item Найдем О - т. пересечения MM` и l: 
+    \[
+      \begin{cases}
+         3x - 2y - 2 =0\\
+         2x + 3y + 3 =0
+      \end{cases} \Rightarrow 
+      \left(\begin{array}{rr|r}
+          2 & 3 & -3\\
+          3 &-2 & 2
+
+      \end{array}\right)\Rightarrow 
+\left(\begin{array}{rr|r}
+          -1 & 5 & -5\\
+          3 &-2 & 2
+\end{array}\right)\Rightarrow 
+\left(\begin{array}{rr|r}
+          -1 & 5 & -5\\
+          0 &13 & -13
+      \end{array}\right)\Rightarrow
+    \] 
+    \[
+      \Rightarrow
+      \begin{cases}
+         y = -1\\
+         5y + 5 = x
+      \end{cases}\Rightarrow
+      O(0;-1)
+    \]
+  \item OM = OM' И M' $\in$ МM'
+\[
+    \begin{cases}
+         3x - 2y - 2 =0\\
+         8^2 + 12^2 = (y+1)^2 + x^2
+      \end{cases}
+      \Rightarrow
+ \begin{cases}
+   x = \frac{2}{3}(y+1)\\
+   \frac{13}{9}(y+1)^2 = 208
+      \end{cases}
+      \Rightarrow
+      \begin{cases}
+   x = \frac{2}{3}(y+1)\\
+         y +1 = \pm 12 
+      \end{cases}
+      \Rightarrow
+      M'(-8;13)
+\]
+\end{enumerate}
+
+\textbf{Oтвет:} $M'(-8;13)$
+
+\section*{Задача 3}
+
+\begin{minipage}[t]{0.45\textwidth}
+   
+\textbf{Дано:}
+A(-2,3)\\ 
+B(7,-3)\\ 
+C(4,8)\\
+\textbf{Составить:}уравнение высоты 
+треугольника $ABC$, проходящего через вершину B.\\
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick] (0,0) node[left] {$A$} -- (2,2) node[above] {$B$} -- (4,0) node[right] {$C$} -- cycle;
+    \draw[dashed] (2,2) -- (2,0) node[below] {$H$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item $\overline{AC}(6,5) \Rightarrow \overline{AC} \perp \overline{BH}$
+  \item Ур-ние прямой через точку и вектор нормали:
+    \[
+      \textbf{Ответ - BH: } (x-7)6 + (y+3)5 = 0 
+    \]
+\end{enumerate}
+
+
+\section*{Задача 4}
+
+\begin{minipage}[t]{0.45\textwidth}
+   
+\textbf{Дано:}
+A(1,1)\\ 
+l: x-y-2=0\\ 
+\textbf{Найти: } S\\
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick] (0,0) node[left] {$A$} -- (2,2) node[above] {$B$} -- (4,0) node[right] {$C$} -- cycle;
+    \draw[dashed] (2,2) -- (2,0) node[below] {$H$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item По уравнению прямой становится ясно, что 
+    точка А не лежит на l.
+  \item Из уравнения l найдем вектор нормали к данной прямой,
+    он будет являтся направляющим вектором некоторой прямой. На этой прямой
+    будет лежать точка А, а также сторона квадрата. \\ 
+    $\overline{n}(1,-1)$
+  \item Найдем ту самую, некоторую прямую, и обозначим ее b. 
+    Для простоты вычисления возьмем вектор нормали к b (1,1)\\ 
+  $b: 1(x-1) + 1(y-1) =0 \Leftrightarrow x+y-2 = 0$
+\item Найдем еще одну вершину квадрата она будет лежать в
+  пересечении этих прямых, назовем ее B.  
+  \[
+  \begin{cases}
+    x-y-2=0\\ 
+    x+y-2 = 0\\ 
+  \end{cases}
+  \Rightarrow \text{B: }
+\begin{cases}
+  x = 2 
+  y = 0 
+\end{cases}
+  \]
+\item Тогда длина стороны квадрата равна $|\overline{AB}| = \sqrt{1+1} = \sqrt{2}$. 
+  Тогда площадь равна $\sqrt{2}^2 = 2$ 
+  
+\end{enumerate}
+
+\textbf{Oтвет: }2 
+
+\section*{Задача 5}
+
+\begin{minipage}[t]{0.45\textwidth}
+   
+\textbf{Дано:} \\ 
+A(-1,-1)\\ 
+B(5,-3)
+C(-3,-3)\\
+\textbf{Найти: }
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick] (0,0) node[left] {$A$} -- (2,2) node[above] {$B$} -- (4,0) node[right] {$C$} -- cycle;
+    \draw[dashed] (2,2) -- (2,0) node[below] {$H$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+\end{enumerate}
+
+\textbf{Oтвет: }2 
+
+
+
+\end{document}
+
