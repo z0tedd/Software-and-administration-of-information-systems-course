@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath}
+\usepackage{pgfplots}
 \usepackage[left=3cm,right=1.5cm,
 top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
 \usepackage{tikz}
@@ -206,8 +207,15 @@ l: x-y-2=0\\
 
 \begin{center}
 \begin{tikzpicture}
-    \draw[thick] (0,0) node[left] {$A$} -- (2,2) node[above] {$B$} -- (4,0) node[right] {$C$} -- cycle;
-    \draw[dashed] (2,2) -- (2,0) node[below] {$H$};
+    \draw[thick] (0,0) -- (0,2) -- (2,2) -- (2,0) -- cycle;
+    \draw[thick] (-0.75,2) -- (0,2) -- (2,2) -- (2.75,2);
+    \draw[thick] (0,-0.75) -- (0,0) -- (0,2) -- (0,2.75);
+     \node[below left] at (0,0) {A};
+    \node[below right] at (2,0) {D};
+    \node[above left] at (0,2) {B};
+    \node[above right] at (2,2) {C};
+    \node[left] at (0,1) {b};
+    \node[above] at (1,2) {l};
 \end{tikzpicture}
 \end{center}
 \end{minipage}
@@ -249,28 +257,788 @@ l: x-y-2=0\\
    
 \textbf{Дано:} \\ 
 A(-1,-1)\\ 
-B(5,-3)
+B(5,-3)\\
 C(-3,-3)\\
-\textbf{Найти: }
+\textbf{Составить ур-ние: } средней линии $ABC$, параллельной $BC$
 \end{minipage}
 \begin{minipage}[t]{0.45\textwidth}
 	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
 \begin{center}
 \begin{tikzpicture}
-    \draw[thick] (0,0) node[left] {$A$} -- (2,2) node[above] {$B$} -- (4,0) node[right] {$C$} -- cycle;
-    \draw[dashed] (2,2) -- (2,0) node[below] {$H$};
+    \draw[thick] (0,0) -- (2,2) -- (4,0) -- cycle;
+    \draw[thick] (0,1) -- (1,1) -- (3,1) -- (4,1);
+    \node[below left] at (0,0) {B};
+    \node[below right] at (4,0) {C};
+    \node[above] at (2,2) {A};
+    \node[above left] at (1,1) {M};
+    \node[above right] at (3,1) {N};
 \end{tikzpicture}
 \end{center}
 \end{minipage}
 \\
 \textbf{Решение:}
 \begin{enumerate}
+  \item Найдем $\overline{MN}$, где M и N - середины AB и AC \\ 
+    \[
+      M\{\frac{-1+5}{2}, \frac{-1-3}{2}\}, N\{\frac{-1-3}{2} ,\frac{-1-3}{2}\} \Rightarrow \overline{MN}\{-4,0\}
+    \]
+  \item Найдем ур-ние прямой MN\\
+    \[
+      MN: 
+      \displaystyle\frac{x-2}{-4} = \displaystyle\frac{y+2}{0} \Leftrightarrow 
+      (x-2)*0 = (y+2)*(-4) \Rightarrow y=-2 
+    \]
 \end{enumerate}
 
-\textbf{Oтвет: }2 
+\textbf{Oтвет: } y=-2
+
+
+\section*{Задача 6}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+A(-5,1)\\ 
+B(4,-2)\\ 
+C(3,0)\\ 
+D(-3,-3)\\ 
+\textbf{Найти: } пересечение AB и CD
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[thick] (0,0) node[above] {A} -- (5,3) node[above]{B};
+  \draw[thick] (0,3) node[above] {C}-- (5,0) node[above]{D};
+  \node[above] at (intersection of 0,0 -- 5,3 and 0,3 -- 5,0) {M};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item  $\overline{AB}(9,-3) \Rightarrow AB: \displaystyle\frac{x+5}{9} = \displaystyle\frac{y-1}{-3}
+    \Leftrightarrow AB: -3x-9y -6 = 0$
+  \item  $\overline{CD}(-6,-3) \Rightarrow CD: \displaystyle\frac{x-3}{-6} = \displaystyle\frac{y-0}{-3}
+    \Leftrightarrow CD: -3x+ 6y +9 = 0$
+  \item Найдем пересечение данных уравнений прямых:
+    \[
+      \begin{cases}
+        -3x - 9y - 6 = 0 \\ 
+        -3x + 6y + 9 = 0 
+      \end{cases}
+      \Leftrightarrow
+      \begin{cases}
+       x+3y + 2 = 0\\ 
+       x-2y -3 = 0
+      \end{cases}
+      \Rightarrow 5y = -5 \Rightarrow 
+      \begin{cases}
+        y = -1 \\ 
+        x = 1
+      \end{cases}
+    \]
+\end{enumerate}
+\textbf{Oтвет: }(1,-1) 
+
+\section*{Задача 7}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\
+P(9,0,-2)\\ 
+a: 4x - 6y - z + 15 = 0\\ 
+\textbf{Найти: } точку симметричную данной отн. а 
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[thick] (0,0) node[above] {$\alpha$} -- (2,1) -- (5,1) -- (3,0) -- cycle;
+  \draw[dashed] (2.25,0) -- (2.25, 0.75);
+  \draw[thick] (2.25, -0.5) node[right] {P'} -- (2.25,0) ; 
+  \draw[thick] (2.25, 2) node[right] {P} -- (2.25,0.75) ; 
+    \fill (2.25,0.75) circle (0.5pt) node[right] {$M$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item a $\Rightarrow \overline{n}(4,-6,-1) $ - вектор нормали 
+  \item Найдем прямую PM, где PM $\perp$ a, а M - т.пересечения PM и а
+  \[
+    PM: \frac{x-9}{4} = \frac{y-0}{-6 } = \frac{z+2}{-1}
+  \] 
+\item Найдем точку M $\in$ a: 
+  \[
+    \begin{cases}
+      \frac{y}{-6} = \frac{x-9}{4}\\ 
+      \frac{y}{-6} = \frac{z+2}{-1}\\ 
+     4x - 6y - z + 15 = 0\\ 
+    \end{cases}
+    \Leftrightarrow 
+    \begin{cases}
+      x = -\frac{2}{3}y + 9\\ 
+      z = \frac{1}{6}y - 2 \\ 
+      4x - 6y - z + 15 = 0\\ 
+    \end{cases}
+    \Rightarrow -\frac{8}{3}y + 36 - 6y - \frac{1}{6}y + 2 + 15 = 0| \cdot 6
+  \]
+  \[
+    -16y + 6\cdot 36 -36y - y + 12 + 15\cdot 6 = 0 \Leftrightarrow -53y = -6\cdot 53 \Rightarrow M:
+    \begin{cases}
+      x = 5\\ 
+      y = 6\\ 
+      z = -1\\
+    \end{cases}
+  \]
+\item точка M - середина отрезка PP', где P'(x,y) - точка симметричная данной, тогда:
+\[
+  \begin{cases}
+    \frac{x+9}{2} = 5\\ 
+    \frac{y+0}{2} = 6\\ 
+    \frac{z-2}{2} = -1\\
+  \end{cases}
+  \Rightarrow P': 
+  \begin{cases}
+    x = 1\\ 
+    y = 12\\ 
+    z = 0
+  \end{cases}
+\]
+\end{enumerate}
+
+\textbf{Oтвет: }P'(1,12,0)
+
+\section*{Задача 8}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+OY $\Rightarrow$ M(0,y,0)\\ 
+$\alpha:$ 3x-6y -2z+6 = 0\\ 
+$\rho(M,\alpha)$ = 6\\
+\textbf{Найти: }M
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[thick] (0,0) node[above] {$\alpha$} -- (2,1) -- (5,1) -- (3,0) -- cycle;
+  \draw[dashed] (2.25,0) -- (2.25, 0.75);
+  \draw[thick] (2.25, -0.5) node[right] {$M_1$} -- (2.25,0) ; 
+
+  \draw[thick] (2.25, 2) node[right] {$M_2$} -- (2.25,0.75) ; 
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item Расстояние от точки до плоскости находится по формуле:
+    \[
+      \rho((x_0,y_0,z_0),ax+by+cz+d) = \frac{|ax_0+by_0+cz_0+d|}{\sqrt{a^2+b^2+c^2}}
+    \]
+  \item Подставим значения под формулу:
+    \[
+      6 = \frac{|-6y + 6|}{7} \Rightarrow \left[\begin{aligned}
+        -&6y+6 = 42\\ 
+        &6y -6 = 42
+      \end{aligned} \right.
+\Rightarrow \left[\begin{aligned}
+      &M_1(0,-6,0)\\ 
+      &M_2(0,6,0)
+      \end{aligned} \right.
+    \]
+\end{enumerate}
+
+\textbf{Oтвет: } 
+$\left[\begin{aligned}
+        &M_1(0,-6,0)\\ 
+        &M_2(0,6,0)
+      \end{aligned} \right.$ 
+
+
+\section*{Задача 9}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+\begin{math}
+  \alpha: 2x-3y-2z + 3 = 0\\ 
+  \beta: x+4y - 4 = 0\\ 
+\end{math}
+
+\textbf{Найти: } Уравнения плоскостей, делящих пополам двугранные углы, образованные данными плоскостями.
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[domain=-1:1,y domain=-1:1]
+        \addplot3[surf, opacity=0.35] {0};
+        \addplot3[surf, opacity=0.35] {x};
+        \addplot3[surf, opacity=0.35] {x*0.5};
+        %\addplot3[surf, opacity=0.35] {x*(-1.5)};
+        \addplot3+[mark=none,thick]({0},{y},{0});
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item Расстояние от точки до плоскости вычисляется по формуле:
+    \[
+      d = \frac{|ax_0+by_0 + cz_0 + d|}{\sqrt{a^2 + b^2 + c^2}}  
+    \]
+  \item Если плоскость является биссектрисой двугранного угла,
+    тогда все ее точки равноудаленны от плоскостей, образующих двугранный угол:
+    \[
+      \frac{|2x - 3y - 2z + 3|}{\sqrt{4+9+4}} = \frac{|x+4y - 4|}{\sqrt{1+4^2}}
+      \Leftrightarrow |2x - 3y - 2z + 3| = |x+4y-4| \Rightarrow 
+      \left[
+        \begin{aligned}
+         &2x-3y-2z + 3 = x+4y-4\\ 
+         &2x-3y-2z + 3 = -x-4y+4
+        \end{aligned}
+      \right. \Leftrightarrow 
+    \]\[ \Leftrightarrow
+ \left[
+        \begin{aligned}
+         &\phi_1: x-7y+7 = 0\\ 
+         &\phi_2: 3x+y-2z - 1 = 0 
+        \end{aligned}
+      \right. 
+    \]
+\end{enumerate}
+
+\textbf{Oтвет: }\begin{math} 
+ \left[
+        \begin{aligned}
+         &\phi_1: x-7y+7 = 0\\ 
+         &\phi_2: 3x+y-2z - 1 = 0 
+        \end{aligned}
+      \right. 
+\end{math}
+ 
+\section*{Задача 10}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+A(5,-9,-2)\\ 
+B(3,-6,-1)\\ 
+C(4,-9,-1)\\ 
+$a: \frac{x}{3} = \frac{y+5}{-6} = \frac{z-4}{-1} $\\ 
+\textbf{Выяснить: }взаимное расположение прямой и плоскости, 
+проходящей через 3 точки. 
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick] (0,0, 0) -- (2,0,0)  -- (2,0,2) -- (0,0,2) node[left] {$\alpha$}  -- cycle;
+    \draw[thick] (0,1,3)  -- (3,1,0) node[below] {$a$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item Уравнение плоскости через 3 точки находится через матрицу вида:
+    \[
+      \begin{vmatrix}
+        x-x_0 &y-y_0 &z-z_0\\ 
+        x_1-x_0 &y_1-y_0 &z_1-z_0\\ 
+        x_2-x_0 &y_2-y_0 &z_2-z_0\\ 
+      \end{vmatrix}
+    \]
+  \item Уравнение плоскости $ \alpha $ через 3 данные точки имеет вид:
+    \[
+      \begin{vmatrix}
+       x-5 &y+9 &z+2\\ 
+       -2 &3 &1\\ 
+       -1 &0 &1 
+      \end{vmatrix}
+    \Leftrightarrow 3(x-5) + (-2+1)(y+9) + 3(z+2) = 0 \Leftrightarrow\]\[
+      \Leftrightarrow 3x+y+3z=0
+    \]
+  \item Проверим пересекаются ли прямая и плоскость:
+    \[
+      \begin{cases}
+        \frac{x}{3} = \frac{y+5}{-6} = \frac{z-4}{-1}\\
+        3x+y+3z=0
+      \end{cases}
+      \Leftrightarrow
+      \begin{cases}
+       y = 6z -29\\ 
+       x = -3z+12\\ 
+       3x + y + 3z = 0 
+      \end{cases}
+      \Rightarrow
+      -9z + 36 +6z - 29 + 3z = 0 \Leftrightarrow
+    \]
+    7 = 0 - неверно, значит прямая и плоскость параллельны.
+\end{enumerate}
+\textbf{Oтвет: }Параллельны
+\section*{Задача 11}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+a: \begin{math}
+  \begin{cases}
+    
+  4x - 6y - z - 49 = 0 \\ 
+  5x - 8y -2z - 65 = 0
+  \end{cases}
+\end{math}
+b: \begin{math}
+  \begin{cases}
+    x = 3 + 4t\\ 
+    y = -6 + 3t\\ 
+    z = -1 - 2t
+  \end{cases}
+\end{math}\\ 
+\textbf{Выяснить: }взаимное расположение прямых\\
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[thick] (-2,0) node[above] {a} -- (2,0) node[below] {$b$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item Найдем вектора нормали к обр. плоскостям прямой а,
+    произведение из векторов нормали есть направляющий вектор
+    к прямой а. 
+    \[
+      \begin{cases}
+          4x - 6y - z - 49 = 0 \\ 
+  5x - 8y -2z - 65 = 0
+
+\end{cases} \Rightarrow 
+\begin{aligned}
+  n_1(4,-6,-1)\\ 
+  n_2(5,-8,-2)
+\end{aligned} \Rightarrow l_a = [n_1,n_2] = 
+\begin{vmatrix}
+  i &j &k\\ 
+  4 &-6 &-1\\ 
+  5 &-8 &-2 
+\end{vmatrix} = 4i+3j-2k \Rightarrow l_a(4,3,-2)
+    \]
+  \item Приведем прямую b к каноническому виду, получим точку на этой прямой и напр. вектор. 
+\[
+   \begin{cases}
+    x = 3 + 4t\\ 
+    y = -6 + 3t\\ 
+    z = -1 - 2t
+  \end{cases}
+\Leftrightarrow 
+\begin{cases}
+  \frac{x-3}{4} = t\\ 
+  \frac{y+6}{3} = t\\ 
+  \frac{z+1}{-2} = t 
+\end{cases}
+\Rightarrow l_b(4,3,-2), M(3,-6,1) \in b 
+\]
+Так как $l_b$ = $l_a$, тогда прямые коллинеарны. 
+\item Подставим точку M в уравнение прямой а:
+  \[
+    \begin{cases}
+      12= 36+1 - 49 = 0 \text{ - верно}\\
+      15 + 48 + 2 - 65 = 0  \text{ - верно}
+    \end{cases}
+    \Rightarrow \text{Прямые совпадают}
+  \]
+  
+\end{enumerate}
+
+\textbf{Oтвет: }Прямые совпадают.
+
+\section*{Задача 12}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+a: \begin{math}
+  \begin{cases}
+    3x+ 8y + 5z + 10 = 0\\ 
+    5x - 4y + z + 2 = 0
+  \end{cases}
+\end{math}\\
+b: \begin{math}
+  \begin{cases}
+    \frac{x-3}{2} = \frac{y+6}{3} = \frac{z+4}{-6}
+  \end{cases}
+\end{math}\\
+
+\textbf{Найти: }расстояние между прямыми
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[thick] (-2,0) node[above] {a} -- (2,0) ;
+  \draw[thick] (-2,-1) -- (2,-1) node[below] {$b$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item Получим направляющий вектор из прямой а ($[\overline{n_1},\overline{n_2}] = l_a$):
+    \[
+      l_a: 
+      \begin{vmatrix}
+        i &j &k \\ 
+        3 &8 &5\\ 
+        9 &-4 &1
+      \end{vmatrix}
+    = 28i + 42j -84k \Rightarrow l_a(28,42,-84)~ l_a(2,3,-6)\]
+  \item Получим точку $M_a(x,y,z) \in a$ путем обнуления координаты x в системе уравнений:
+    \[
+      \begin{cases}
+        8y + 5z + 10 = 0\\ 
+        -4y + z + 2 = 0 
+      \end{cases}
+    \Rightarrow y = 0 \Rightarrow z = -2 \Rightarrow M_a(0,0,-2)\]
+  \item Проанализиров уравнение прямой b, получим $l_b(2,3,-6), M_b(3,-6,-4) \in b$. Направляющие
+    вектора прямой а и прямой b совпадают, а значит считать расстояние между прямыми нужно через 
+    векторное произведение $M_aM_b()$ и $l_b$. Напишем общее уравнение для вычисление расстояния между
+    параллельными прямыми:
+    \[
+      \rho(a,b) = \frac{|[M_aM_b, l_b]|}{|l_b|} 
+    \]
+  \item Решим по последней формуле, выполнив промежуточные вычисления:
+    \[
+      \begin{Vmatrix}
+        i &j &k\\ 
+        3 &-6 &-2\\ 
+        2 &3 &-6
+      \end{Vmatrix} = |42i + 14j + 21k| = \sqrt{42^2 + 14^2 + 21^2} = 49\]\[
+      \rho(a,b) = \frac{49}{\sqrt{2^2+3^2+(-6)^2}} = 7 
+    \]
+\end{enumerate}
+
+\textbf{Oтвет: }7
+
+
+\section*{Задача 13}
 
 
 
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+
+a: \begin{math}
+  \begin{cases}
+    5x-3y+4z-35 = 0\\ 
+    7x - 3y + 5z - 49 = 0 
+  \end{cases}
+\end{math}\\
+b: \begin{math}  
+\frac{x-3}{9} = \frac{y-3}{2} = \frac{z+2}{-1}
+\end{math}\\
+\textbf{Найти: }угол между прямыми
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[thick] (0,0,0) -- (0,0,2) node[below] {a};
+  \draw[thick, rotate around y = 60] (0,1,0) -- (0,1,2) node[below] {b};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item Найдем направляющий вектор к прямой а:
+    \[
+      l_a = [n_1(5,-3,4),n_2(7,-3,5)] = 
+      \begin{vmatrix}
+        i &j &k\\ 
+        5 &-3 &4\\ 
+        7 &-3 &5 
+      \end{vmatrix} = -3x + 3y + 6z \Rightarrow l_a(-3,3,6)
+    \]
+    
+    
+    \item Формула для подсчета угла между прямыми a и b по направляющим векторам $l_a$ и $l_b$: 
+      \[
+        \alpha = arccos(\left|\frac{(l_a,l_b)}{|l_a||l_b|} \right|)
+      \]
+      \[
+        \alpha = arccos(\left|\frac{-27}{\sqrt{3^2+3^2+6^2}\sqrt{9^2 + 2^2 + 1}}\right|) \Rightarrow \alpha = arccos(\frac{3\sqrt{129}}{86})
+      \]
+\end{enumerate}
+
+\textbf{Oтвет: }$ arccos(\frac{3\sqrt{129}}{86})$ 
+
+\section*{Задача 14}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+a: \begin{math}
+  \frac{x}{1} = \frac{y+3}{0} = \frac{z+3}{1}
+\end{math}\\ 
+b: \begin{math}
+  \frac{x-27}{21}=\frac{y+4}{6}=\frac{z-5}{14}
+\end{math}
+
+\textbf{Найти: }
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[thick] (0,0, 0) -- (2,0,0)  -- (2,0,2) node[below]{$l_a$} -- (0,0,2) node[left] {$ M_a $}  -- cycle;
+  \draw[thick] (0.25,1, 0)node[left] {$l_b$}  -- (2.25,1,0) -- (2.25,1,2) -- (0.25,1,2) node[left] {$M_b$}  -- cycle;
+    \draw[thick] (2.25,1,0) -- (2,0,0);
+    \draw[thick] (2.25,1,2) -- (2,0,2);
+    \draw[thick] (0.25,1,2) -- (0,0,2);
+    \draw[thick] (0.25,1,0) -- (0,0,0);
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item Найдем для прямых точку и направляющий вектор:
+    \[
+      a\Rightarrow \begin{aligned}
+        &l_a(1,0,1)\\ 
+        &M_a(0,-3,-3)
+      \end{aligned}
+    \]
+    \[
+      b\Rightarrow \begin{aligned}
+        &l_b(21,6,14)\\ 
+        &M_b(27,-4,5)
+      \end{aligned}
+    \]
+  \item Расстояние между скрещивающимися прямыми(направляющие вектора разные) вычисляется по формуле:
+    \[
+      \rho(a,b) = \frac{(M_aM_b,l_a,l_b)}{|[l_a,l_b]|}
+    \]
+  \item Промежуточные вычисления:
+    \[
+      (M_aM_b,l_a,l_b) = \begin{vmatrix}
+        27 &-1 &8\\
+        1 &0 &1 \\ 
+        21 &6 &14
+      \end{vmatrix} = 121
+    \]
+    \[
+      [l_a,l_b] = \begin{Vmatrix}
+        i &j &k\\ 
+        1 &0 &1\\ 
+        21 &6 &14
+      \end{Vmatrix} =| -6i +7j +6k| = 11  
+    \]
+    \[
+      \rho(a,b) = \frac{121}{11} = 11
+    \]
+\end{enumerate}
+
+\textbf{Oтвет: }11 
+\section*{Задача 15}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+P(21,11,-6)\\ 
+a: $ \frac{x}{5} = \frac{y+1}{6} = \frac{z-3}{-1}$\\ 
+\textbf{Найти: }точку симметричную P отн. а. 
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick] (0,-1) -- (3,1.5) node[right] {$a$};
+    \fill (1,1) circle (2pt) node[above] {$P$};
+    \fill (2,0) circle (2pt) node[below] {$P'$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item a $ \Rightarrow l(5,6,-1)  $
+  \item Найдем уравнение плоскости $\alpha$ , проходящей через P' и перпендикулярной а. 
+    \[
+      5(x-21) + 6(y-11) -(z+6) = 0 \Leftrightarrow 5x+6y-z-177 =0 
+    \]
+    \item Найдем M - т. пересечения $ \alpha $ и а:
+      \[
+        \begin{cases}
+5x+6y-z-177 =0 \\ 
+\frac{x}{5} = \frac{y+1}{6} \\
+\frac{y+1}{6} = \frac{z-3}{-1}
+        \end{cases} 
+      \Rightarrow M(15,17,0)\] 
+\item M - середина PP', где P'(x,y,z) - искомая точка
+  \[
+    \begin{cases}  
+    \frac{x+21}{2} = 15 \\ 
+    \frac{y+11}{2} = 17 \\ 
+    \frac{z-6}{2} = 0 
+    \end{cases} \Rightarrow P'(9,23,6)
+  \]
+\end{enumerate}
+\textbf{Oтвет: } P'(9,23,6) 
+
+\section*{Задача 16}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+P(9,0,3)\\ 
+a: 4x +3y + z -13 = 0\\ 
+\textbf{Найти: }Проекцию точки Р на а
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[thick] (0,0) node[above] {$\alpha$} -- (2,1) -- (5,1) -- (3,0) -- cycle;
+  \draw[thick] (2.25, 2) node[right] {$P$} -- (2.25,0.75) node[right]{P'} ; 
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item $ a \Rightarrow n(4,3,1) \perp a$ 
+  \item Найдем прямую $l \perp a $ и $ P \in l $:
+    \[
+      l: \frac{x-9}{4} = \frac{y-0}{3} = \frac{z-3}{1}
+    \]
+  \item Найдем искомую точку P' - пересечение l и a. 
+    \[
+      \begin{cases}
+        \frac{x-9}{4} = \frac{y-0}{3} \\ 
+ \frac{y-0}{3} = \frac{z-3}{1}\\
+ 4x +3y + z -13 = 0\\ 
+      \end{cases}
+      \Rightarrow P'(5,-3,2)
+    \]
+\end{enumerate}
+
+\textbf{Oтвет: } P'(5,-3,2)
+\section*{Задача 17}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}\\ 
+P(-6,-4,-6)\\
+a: $ \frac{x-3}{4}= \frac{y+1}{1} = \frac{z-3}{5} $\\
+\textbf{Найти: } Проекцию Р на а
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+  \draw[thick, rotate = 15] (1,0) node[left] {P'}-- (1,1) node[left] {P};
+  \draw[thick, rotate = 15] (0,0) -- (5,0);node[left] {a};
+  \fill[rotate = 15] (1,0) circle(2 pt) ;
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item $ a \Rightarrow l(4,1,5) \Rightarrow \alpha \perp a \land P \in \alpha$
+    \[
+      \alpha: 4(x+6) + (y+4) + 5(z+6) = 0 \Leftrightarrow 4x+y+5z-58 =0 
+    \]
+  \item $P' \in \alpha \land P' \in a $: 
+    \[
+      \begin{cases}
+        4x+y+5z_58 =0\\ 
+ \frac{x-3}{4}= \frac{y+1}{1}\\ 
+ \frac{y+1}{1} = \frac{z-3}{5} 
+      \end{cases}
+      \Rightarrow P'(-5,-3,-7)
+    \]
+\end{enumerate}
+
+\textbf{Oтвет: } P'(-5,-3,-7)
+
+\section*{Задача 18}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\textbf{Дано:}
+a: $ \begin{cases}
+  4x+3y+z-29 = 0\\ 
+  5x+4y+z-36 = 0\\ 
+\end{cases} $\\
+$ \alpha $: 3x + 2y+z+4=0 \\
+\textbf{Выяснить: }взаимное расположение прямой и плоскости 
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[thick] (0,0, 0) -- (2,0,0)  -- (2,0,2) -- (0,0,2) node[left] {$\alpha$}  -- cycle;
+    \draw[thick] (0,1,3)  -- (3,1,0) node[below] {$a$};
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\\
+\textbf{Решение:}
+\begin{enumerate}
+  \item $a \Rightarrow l_a = [n_1(4,3,1),n_2(5,4,1)] = -i + j + k \Leftrightarrow l_a(-1,1,1) $ 
+  \item Проверим есть ли пересечение а и $ \alpha $:
+    \[
+      \begin{cases}
+         4x+3y+z-29 = 0\\ 
+  5x+4y+z-36 = 0\\ 
+ 3x + 2y+z+4=0 
+      \end{cases}
+      \Rightarrow \begin{pmatrix}
+        4&3&1&\vrule&29\\ 
+        3&2&1&\vrule&-4\\ 
+        5&4&1&\vrule&36 
+      \end{pmatrix}
+\sim \begin{pmatrix}
+        1&1&0&\vrule&33\\ 
+        3&2&1&\vrule&-4\\ 
+        5&4&1&\vrule&36 
+      \end{pmatrix} \sim \]\[
+\sim \begin{pmatrix}
+        1&1&0&\vrule&33\\ 
+        0&-1&1&\vrule&-4-33*3\\ 
+        0&-1&1&\vrule&36 - 33*5 
+      \end{pmatrix} \Rightarrow \text{ (н. стр. - ср. стр) } 0 = 40 -33*2 - \text{ неверно, тогда }  a || \alpha
+    \]
+\end{enumerate}
+
+\textbf{Oтвет: } Прямая параллельна плоскости
 \end{document}
 
