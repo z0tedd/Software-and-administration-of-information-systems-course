@@ -1,0 +1,36 @@
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:41.559829 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.007657865000055608 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:43.310382 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.0005755569995926635 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:46.862040 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.0005220069997449173 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:47.442568 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.000987853999959043 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:47.875183 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.0009667469998930756 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:48.092122 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.0007639989999006502 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:48.280687 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.0007395610000457964 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:48.464960 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.0006385890001183725 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:48.718206 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.0006349000000227534 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:48.897620 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.0005979059997116565 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:49.074792 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.0009647949996178795 seconds
+ERROR:myapp.middleware:This should go to both console and file
+INFO:myapp.middleware:Request information, time: 2024-08-12 17:26:57.751579 , client_ip: 127.0.0.1 , path: /
+INFO:myapp.middleware2:Endpoint: /, Request processed in 0.0004749089998767886 seconds

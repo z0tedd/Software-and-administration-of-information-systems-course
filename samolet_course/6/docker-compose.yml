@@ -1,0 +1,10 @@
+# docker-compose.yaml
+services:
+  web:
+    build:
+      context: ./
+    command: python manage.py runserver 0.0.0.0:8000 #127.0.0.1 isn't working 'cause every docker container has his only loopback
+    volumes:
+      - ./sales_shop/:/var/app
+    ports:
+      - "8000:8000"

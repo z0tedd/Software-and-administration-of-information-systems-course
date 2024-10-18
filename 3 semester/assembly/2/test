@@ -1,0 +1,19 @@
+format ELF
+
+section '.data' writeable
+    a dd 1
+    b dd 2
+
+section '.text' executable
+public main
+
+main:
+     mov ebp, esp; for correct debugging
+     push b
+     push a
+     mov eax, dword[a]
+     add eax, dword[b]
+     push eax
+     mov esp, ebp
+     xor eax, eax
+     ret

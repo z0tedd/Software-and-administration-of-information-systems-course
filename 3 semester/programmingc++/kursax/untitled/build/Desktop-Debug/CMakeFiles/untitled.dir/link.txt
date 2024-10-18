@@ -1,0 +1,1 @@
+/usr/bin/g++ -DQT_QML_DEBUG -g CMakeFiles/untitled.dir/untitled_autogen/mocs_compilation.cpp.o CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/mainwindow.cpp.o -o untitled  /usr/lib/libQt6Widgets.so.6.7.3 /usr/lib/libQt6Gui.so.6.7.3 /usr/lib/libQt6Core.so.6.7.3 /usr/lib/libGLX.so /usr/lib/libOpenGL.so
