@@ -1,0 +1,116 @@
+\documentclass[a4paper,14pt]{extreport} % добавить leqno в [] для нумерации слева
+%\usepackage[14pt]{extsizes}
+\usepackage[left=3cm,right=1.5cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\linespread{1.45} %полуторный интервал
+\usepackage{titlesec}
+%%% Работа с русским языком
+\titleformat{\section}{\normalfont\bfseries}{\thechapter}{14pt}{\bfseries}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{ fancyhdr} % улучшенная нумерация страниц
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+%\renewcommand{\sfdefault}{cmss}
+\usefont{T2A}{cmss}{m}{n}
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%\renewcommand{\sfdefault}{cmss}
+\usepackage{tempora}
+
+\begin{document}
+
+\begin{align*}
+&\frac{x^2}{100} + \frac{y^2}{4} + \frac{z^2}{9} = 1 \quad \text{(С эллиптической цилиндром ось у)}\\
+&\text{A}(1, 2, 0)
+\end{align*}
+
+\section*{Алгоритм:}
+
+1.$ \text{Пусть} M(x_0, y_0, z_0) \in \ell. \text{ Если она принадлежит } z, \text{ то ее проекция на плоскость } xOy \text{ имеет вид} $
+\begin{align*}
+&\frac{x_0^2}{100} + \frac{y_0^2}{4} = 1 \\
+&x_0 = 0 \implies M(0, y_0, z_0)
+\end{align*}
+
+2.$ \text{Т.к. она параллельна плоскости } xOy, \text{ то образует } \ell \parallel xOz, M \in \ell $
+\begin{align*}
+&\frac{x - x_0}{1} = \frac{y - y_0}{2} = \frac{z - z_0}{0} = \frac{2 - 2z_0}{0}
+\end{align*}
+
+Подставим $z_0 = \frac{2}{2} = 1$
+
+\begin{align*}
+y &= y_0 \\
+x &= 2 - 2y
+\end{align*}
+
+$\text{Подставим в} \quad \boxed{\text{множество ответов}}$
+
+\begin{align*}
+100x^2 - 36y^2 + 225z^2 - 300 = 0 \quad \text{(Канонический обpаз параболоида)}
+\end{align*}
+
+$\text{Через } A(1, 2, 0), (0, 1, 0), (0, 0, 2) \text{ищем } E(z), \text{ и } \ell.$
+
+$\text{Подставим } (z = 1):$
+\begin{align*}
+100x^2 - 36y^2 + 225z^2 - 300 &= 0 \\
+100x^2 - 36(2y + 4z)^2 + 225(1 + z)^2 - 300 &= 0
+\end{align*}
+
+$\text{Ищем параллельное направление}:$
+
+\begin{align*}
+l_2 : 
+\begin{cases}
+y = -x + z \\
+z = t \\
+\end{cases}
+\end{align*}
+
+Подставим в параболу:
+
+\begin{align*}
+100t^2 + 4t^2 - 36t^2 + 225t^2 &= 0 \\
+\text{Решим квадратное уравнение:} \\
+100 + 36 + 225 &= 800 \\
+1000 - 36c^2 + 225c^2 - 800 &= 0 \\
+800 + 448 + 360 &= 0
+\end{align*}
+
+$\text{Решим уравнение:} $
+
+\begin{align*}
+l(z) : 
+\begin{cases}
+x = 0 \\
+y = 0 \\
+\end{cases}
+\end{align*}
+
+\begin{align*}
+z(1, B, C):
+\begin{cases}
+100 - 36c^2 + 225c^2 = 0 \\
+800 + 448 + 360 = 0
+\end{cases}
+\end{align*}
+
+$\text{Конус } C_1, C_2 - \text{решение}$
+\end{document}

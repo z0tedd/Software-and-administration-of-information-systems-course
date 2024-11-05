@@ -1,0 +1,179 @@
+\documentclass[a4paper,14pt]{extreport} % добавить leqno в [] для нумерации слева
+%\usepackage[14pt]{extsizes}
+\usepackage[left=3cm,right=1.5cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\linespread{1.45} %полуторный интервал
+\usepackage{titlesec}
+%%% Работа с русским языком
+\titleformat{\section}{\normalfont\bfseries}{\thechapter}{14pt}{\bfseries}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{ fancyhdr} % улучшенная нумерация страниц
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+%\renewcommand{\sfdefault}{cmss}
+\usefont{T2A}{cmss}{m}{n}
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%\renewcommand{\sfdefault}{cmss}
+\usepackage{tempora}
+
+\begin{document}
+  
+\begin{center}
+    \textbf{Самостоятельная работа по геометрии и топологии} \\
+    \textbf{Вариант 1}
+\end{center}
+
+\noindent
+
+
+\paragraph {1 задача}
+ Составьте уравнение цилиндрической поверхности, образующие которой параллельны вектору $\vec{a} (1,2,0)$, а направляющая задана системой:
+\[
+  \alpha \text{:}
+\begin{cases}
+    \frac{x^2}{25} + \frac{y^2}{4}+ \frac{z^2}{9}= 1 \\
+    x = 0\\
+\end{cases}
+\]
+\textbf{Алгоритм}
+1) Пусть $M(x_0, y_0, z_0) \in \alpha$.  Если она принадлежит $\alpha$, 
+то ее ур-ние удолетворяет системе
+\[  
+\begin{cases}
+    \frac{x_0^2}{25} + \frac{y_0^2}{4}+ \frac{z_0^2}{9}= 1 \\
+    x_0 = 0\\
+\end{cases}
+=> M(0, y_0, z_0)
+\]
+2) Так как это цилиндр, то образующая l || $\vec{a}$, $M \in l$. \\ 
+Напишем уравнение образующей. 
+\[
+  \frac{x-0}{1} = \frac{y-y_0}{2} = \frac{z-z_0}{0}
+\]
+\[
+  \begin{cases}
+     x = \frac{y-y_0}{2}\\ 
+     x = \frac{z-z_0}{0}
+  \end{cases} => 
+  \begin{cases}
+    y_0 = y - 2x \\ 
+    z_0 = z
+  \end{cases} 
+\]
+3) Подставим уравнение данной прямой в уравнение направляющей, получим ответ. 
+\[
+  \frac{(y-2x)^2}{4} + \frac{z^2}{9} = 1
+\]
+
+Ответ: $\frac{(y-2x)^2}{4} + \frac{z^2}{9} = 1$
+
+\noindent
+\textbf{№2.} Напишите уравнения прямолинейных образующих однополосного гиперболоида: $100x^2 - 36y^2 + 225z^2 = 900$, проходящих через точку $A(3; 2; 0,8)$.
+
+Решение:\\
+1) Пусть $\vec{l}(a,b,c)$ - направляющий вектор, прямолинейной образующей $ l $, где $ A \in l $
+\[
+  l: \begin{cases}
+     x = at + 3\\ 
+     y = bt + 2\\ 
+     z = ct + 0.8\\
+   \end{cases} \text{, Подставляем в уравнение из условия}
+\]
+\[
+  100(at+3)^2 - 36(bt+2)^2 + 225(ct+0.8) - 900 = 0
+\]
+Так как ур-ние должно выполнятся $ \forall t $, то тогда должно выполнятся:
+\[
+\begin{aligned}
+  &t^2|   &100a^2 -36b^2 + 225c^2 = 0\\
+  &t^1|   &600at - 144b + 360c = 0\\
+  &t^0|  &900-144+144-900 = 0\\
+\end{aligned} =>
+  \begin{cases}
+    100a^2 -36b^2 + 225c^2 = 0\\
+    600at - 144b + 360c = 0\\
+  \end{cases}
+\]  
+Для направ. вектора $\vec{l}(a,b,c)$ возьмем 2 варианта $\vec{l}(0,b,c)$, $\vec{l}(1,b,c)$ \\
+$\vec{l}(0,b,c)$: 
+\[ 
+  \begin{cases}
+     -36b^2 + 225c^2 = 0\\
+     - 144b + 360c = 0\\
+  \end{cases} => b = \frac{360}{144}c = \frac{5}{2}c 
+\]  
+\[
+  -36 * \frac{25}{4}c^2 + 225c^2 = 0 => 0*c^2 = 0 => c \in \mathbb{R}
+\]
+При с = 0, b = 0, получается нулевой вектор, поэтому данный вектором будет $ \vec{l1}(0,\frac{5}{2}c, c) \space c \in \mathbb{R}/ {0}$ \\
+\\
+$\vec{l}(1,b,c)$: 
+\[ 
+  \begin{cases}
+     100 -36b^2 + 225c^2 = 0\\
+     600 - 144b + 360c = 0\\
+   \end{cases} => b = \frac{29}{12}, \space c = -\frac{7}{10}\text{ (Подсчитано на калькуляторе)}
+\]  
+$\vec{l2}(1,\frac{29}{12},-\frac{7}{10})$ \\
+2) Подставляем значения напр. векторов в l: \\
+\[
+  l1:
+  \begin{cases} 
+     x = 3\\ 
+     y = \frac{5}{2}ct + 2\\ 
+     z = ct + 0.8\\
+ \end{cases} \text{ , где } \space c \in \mathbb{R}/ {0} \text{ , } l2:
+\begin{cases} 
+     x = t+ 3\\ 
+     y = \frac{29}{12}t + 2\\ 
+     z = \frac{-7}{10}t + 0.8\\
+\end{cases}
+\]
+Что и является ответом.\\
+
+\noindent
+\textbf{№3.} Напишите уравнения прямолинейных образующих гиперболического параболоида:
+\[
+\frac{y^2}{4} - \frac{z^2}{9} = 10x,
+\]
+параллельных вектору $\vec{a}(2; 10; -15)$.
+
+\noindent
+\textbf{№4*. №9.905 (1).}
+
+905. Даны две точки $F_1$, $F_2$, расстояние между которыми равно $2c > 0$ и число $a > 0$. Найти фигуры:
+\[
+\begin{aligned}
+    &1. \quad \Phi_1 = \{M | \rho(M, F_1) + \rho(M, F_2) = 2a, \quad a > c\}; \\
+    &2. \quad \Phi_2 = \{M | \rho(M, F_1) - \rho(M, F_2) = 2a, \quad a < c\}.
+\end{aligned}
+\]
+
+
+
+
+
+
+
+
+
+
+\paragraph {1 задача}
+\end{document}
