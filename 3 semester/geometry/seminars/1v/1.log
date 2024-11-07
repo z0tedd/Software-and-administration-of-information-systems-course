@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.17)  6 NOV 2024 00:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.17)  8 NOV 2024 00:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1671,27 +1671,32 @@ LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/tempora/t2a-tempora.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 124--128
+Underfull \hbox (badness 10000) in paragraph at lines 125--129
 
  []
 
 
-Overfull \hbox (18.79092pt too wide) detected at line 133
+Overfull \hbox (18.79092pt too wide) detected at line 134
 [] \OT1/cmr/m/n/14.4 =\OML/cmm/m/it/14.4 > b \OT1/cmr/m/n/14.4 = []\OML/cmm/m/i
 t/14.4 ; c \OT1/cmr/m/n/14.4 = \OMS/cmsy/m/n/14.4 ^^@[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
+Underfull \hbox (badness 10000) in paragraph at lines 134--137
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 149--151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
+Underfull \hbox (badness 10000) in paragraph at lines 194--197
 
  []
 
-[2] [3] (./1.aux)
+[3] [4] [5] [6] [7] (./1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1704,11 +1709,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  10504 strings out of 475477
  168616 string characters out of 5784403
- 1938187 words of memory out of 5000000
+ 1940187 words of memory out of 5000000
  32407 multiletter control sequences out of 15000+600000
  585618 words of font info for 72 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 65i,7n,72p,456b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 65i,9n,72p,608b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/tempora/Tempora-Bold.pfb></usr/shar
 e/texmf-dist/fonts/type1/public/tempora/Tempora-Regular.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type
@@ -1718,10 +1723,10 @@ fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on 1.pdf (3 pages, 130674 bytes).
+Output written on 1.pdf (7 pages, 140702 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
