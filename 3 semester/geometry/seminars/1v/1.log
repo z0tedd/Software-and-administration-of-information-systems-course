@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.30)  9 NOV 2024 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.30)  9 NOV 2024 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1595,50 +1595,50 @@ LaTeX Font Info:    Font shape `T2A/Tempora-TLF/b/n' will be
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
 
 LaTeX Font Warning: Font shape `T2A/cmr/m/up' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 47.
+(Font)              using `T2A/cmr/m/n' instead on input line 48.
 
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
-7.
+8.
 (/usr/share/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 
 LaTeX Font Warning: Font shape `OML/cmr/m/up' undefined
-(Font)              using `OML/cmr/m/it' instead on input line 47.
+(Font)              using `OML/cmr/m/it' instead on input line 48.
 
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <14.4> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 47.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 47.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <7> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 47.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 48.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-7.
+8.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 
 LaTeX Font Warning: Font shape `OMS/cmr/m/up' undefined
-(Font)              using `OMS/cmr/m/n' instead on input line 47.
+(Font)              using `OMS/cmr/m/n' instead on input line 48.
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 47
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 48
 .
 
 (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -1646,52 +1646,57 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `OT2/cmr/m/up' undefined
-(Font)              using `OT2/cmr/m/n' instead on input line 47.
+(Font)              using `OT2/cmr/m/n' instead on input line 48.
 
 
 LaTeX Font Warning: Font shape `T2C/cmr/m/up' undefined
-(Font)              using `T2C/cmr/m/n' instead on input line 47.
+(Font)              using `T2C/cmr/m/n' instead on input line 48.
 
 <<t2c.cmap>>
 
 LaTeX Font Warning: Font shape `T2B/cmr/m/up' undefined
-(Font)              using `T2B/cmr/m/n' instead on input line 47.
+(Font)              using `T2B/cmr/m/n' instead on input line 48.
 
 <<t2b.cmap>>
 
 LaTeX Font Warning: Font shape `LGR/cmr/m/up' undefined
-(Font)              using `LGR/cmr/m/n' instead on input line 47.
+(Font)              using `LGR/cmr/m/n' instead on input line 48.
 
 <<lgr.cmap>>
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 49.
+(Font)              scaled to size 10.0pt on input line 50.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 49.
+(Font)              scaled to size 7.0pt on input line 50.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/tempora/t2a-tempora.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 124--128
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
 
  []
 
 
-Overfull \hbox (18.79092pt too wide) detected at line 133
+Overfull \hbox (18.79092pt too wide) detected at line 135
 [] \OT1/cmr/m/n/14.4 =\OML/cmm/m/it/14.4 > b \OT1/cmr/m/n/14.4 = []\OML/cmm/m/i
 t/14.4 ; c \OT1/cmr/m/n/14.4 = \OMS/cmsy/m/n/14.4 ^^@[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
+Underfull \hbox (badness 10000) in paragraph at lines 135--138
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 150--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
+Underfull \hbox (badness 10000) in paragraph at lines 195--198
 
  []
 
-[2] [3] (./1.aux)
+[3] [4] [5] [6] [7] (./1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1704,11 +1709,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  10504 strings out of 475477
  168616 string characters out of 5784403
- 1938187 words of memory out of 5000000
+ 1940187 words of memory out of 5000000
  32407 multiletter control sequences out of 15000+600000
  585618 words of font info for 72 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 65i,7n,72p,456b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 65i,9n,72p,608b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/tempora/Tempora-Bold.pfb></usr/shar
 e/texmf-dist/fonts/type1/public/tempora/Tempora-Regular.pfb></usr/share/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type
@@ -1718,10 +1723,10 @@ fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on 1.pdf (3 pages, 130674 bytes).
+Output written on 1.pdf (7 pages, 141588 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
