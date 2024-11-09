@@ -1,0 +1,1 @@
+/usr/bin/g++ -DQT_QML_DEBUG -g CMakeFiles/Hangman.dir/Hangman_autogen/mocs_compilation.cpp.o CMakeFiles/Hangman.dir/main.cpp.o CMakeFiles/Hangman.dir/mainwindow.cpp.o CMakeFiles/Hangman.dir/Settings.cpp.o CMakeFiles/Hangman.dir/Random.cpp.o -o Hangman  /usr/lib/libQt6Widgets.so.6.8.0 /usr/lib/libQt6Gui.so.6.8.0 /usr/lib/libGLX.so /usr/lib/libOpenGL.so /usr/lib/libQt6Core.so.6.8.0

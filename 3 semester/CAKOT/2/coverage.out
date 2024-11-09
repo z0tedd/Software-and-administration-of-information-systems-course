@@ -1,0 +1,18 @@
+mode: atomic
+laba/main.go:9.64,14.2 3 4
+laba/main.go:16.63,27.26 10 4
+laba/main.go:27.26,29.3 1 23
+laba/main.go:32.2,32.24 1 4
+laba/main.go:32.24,35.3 2 27
+laba/main.go:38.2,38.27 1 4
+laba/main.go:38.27,41.13 1 51
+laba/main.go:41.13,43.26 1 8
+laba/main.go:43.26,44.25 1 25
+laba/main.go:44.25,45.11 1 0
+laba/main.go:50.4,50.14 1 8
+laba/main.go:50.14,53.5 1 8
+laba/main.go:57.3,57.14 1 51
+laba/main.go:57.14,61.13 2 47
+laba/main.go:61.13,63.5 1 5
+laba/main.go:66.2,67.12 2 4
+laba/main.go:69.14,69.15 0 0

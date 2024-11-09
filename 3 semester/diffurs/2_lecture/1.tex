@@ -1,0 +1,260 @@
+\documentclass[a4paper,14pt]{extreport} % добавить leqno в [] для нумерации слева
+%\usepackage[14pt]{extsizes}
+\usepackage[left=3cm,right=1.5cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\linespread{1.45} %полуторный интервал
+\usepackage{titlesec}
+%%% Работа с русским языком
+\titleformat{\section}{\normalfont\bfseries}{\thechapter}{14pt}{\bfseries}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{ fancyhdr} % улучшенная нумерация страниц
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+%\renewcommand{\sfdefault}{cmss}
+\usefont{T2A}{cmss}{m}{n}
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+% \newcommand \cdot {\hm}[1]{#1\nobreak\discretionary{}
+% 	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%\renewcommand{\sfdefault}{cmss}
+\usepackage{tempora}
+
+\begin{document}
+  
+\begin{center}
+    \textbf{Лекция 08.11.24} \\
+\end{center}
+В чем суть интегрирующего мн-жителя, допустим есть диф. уравнение: \[
+  M(x,y)dx + N(x,y)dy = 0 \]\[ 
+  \frac{Dm}{Dy} != \frac{Dn}{Dx} => \text{не явл. ур. в Полных дифференциалах}
+\]
+f(x,y) называется. интегрирующим мн-жителем, если умножение этой функции на ур-ние,
+получаем мн-во: 
+\[
+  f(x,y)(M(x,y)dx + N(x,y)dy)=0,  (f!=0)
+\]
+\[
+  \frac{D(f \cdot M)}{Dy}= \frac{D(f(N))}{Dx}
+\]
+
+Условия, при которых f(x) явля. инт. множителем. \\ 
+Пусть f(x) - инт. мн-житель, тогда выполн.\[
+  \frac{D(f \cdot M)}{Dy} = \frac{D(f \cdot N)}{Dx}
+\]
+\[
+  \frac{D(f(x) \cdot M(x,y))}{Dy} = f(x) \cdot  \frac{DM(x,y)}{Dy}
+\]
+\[
+  \frac{D(f(x) \cdot M(x,y))}{D(x)} = \frac{Df(x)}{Dx} \cdot N(x,y) + \frac{DN(x,y)}{Dx} \cdot f(x)
+\]
+\[
+  f(x) \cdot \frac{DM}{Dy} = \frac{Df(x)}{f(x)} \cdot N + \frac{DN}{Dx} \cdot f(x)
+\]
+\[
+  \frac{df(x)}{dx \cdot f(x)} = \frac{1}{N}(\frac{DM}{Dy} - \frac{DN}{Dx})
+\]
+Если выполняется отношение: \[
+  \frac{\frac{DM}{Dy} - \frac{DN}{Dx}}{N}  = \phi(x)
+\], то инт. мн-житель находится как функция от х
+
+Условия, при которых f(y) явля. инт. множителем.
+\[
+  f(y)(\frac{DN}{Dx} - \frac{DM}{Dy} = \frac{Df(y)}{Dy} \cdot M)
+\] 
+\[
+  \frac{Df(y)}{Dy \cdot f(y)} = \frac{1}{M}(\frac{DN}{Dx} - \frac{DM}{Dy})
+\]
+\[
+  \frac{\frac{DN}{Dx}- \frac{DM}{Dy}}{M} = \phi(y) 
+\]
+Пример:
+\[
+  (xy^2 - y^3)dx + (1-xy^2)dy = 0
+\]
+\[
+  \frac{DM}{Dy} = \frac{DN}{Dx}
+\]
+\[
+  \frac{D(xy^2 - y^3)}{Dy} != \frac{D(1-xy^2)}{Dx}
+\]
+\[
+  \frac{D(xy^2-y^3)}{Dy} = 2xy- 3y^2
+\]
+\[
+ \frac{D(1-xy^2)}{Dx} = -y^2 
+\]
+\[
+ \frac{\frac{DM}{Dy}- \frac{DN}{Dx}}{N} = \frac{2xy-3y^2+y^2}{1-xy^2} = \frac{2xy-2y^2}{1-xy^2} != f(x) 
+\]
+\[
+  \frac{\frac{DN}{Dx}- \frac{DM}{Dy}}{M} = \frac{-y^2 - 2xy + 3y^2}{xy^2 - y^3}  = \frac{2y^2-2xy}{xy^2-y^3} = \frac{2y(y-x)}{y^2(y-x)^2} = \frac{2}{y}
+\]
+Таким образом инт. множитель можно находить через f(y)
+\[
+  (xy^2 - y^3)dx + (1-xy^2)dy = 0
+\]
+
+\[
+  f(y)(xy^2-y^3)dx + f(y)(1-xy^2)dy = 0 
+\]
+\[
+  M = f(y)(xy^2-y^3), N = f(y)(1-xy^2)
+\]
+\[
+  \frac{DM}{Dy} = \frac{Df}{dy}(xy^2-y^3) + f*(2xy - 3y^3)
+\]
+\[
+  \frac{DN}{Dx} = f(y)*(-y^2)
+\]
+\[
+  f_y'(xy^2 - y^3) + f(2xy - 3y^2) = f(-y^2)
+\]
+\[
+  f_y'(xy^2-y^3)+f(2xy-3y^2+y^2) = 0
+\]
+\[
+  f'y^2(x-y)+2yf(x-y)=0
+\]
+\[
+f'y^2 + 2yf = 0   
+\]
+\[
+  \frac{df}{dy}y^2 + 2yf = 0
+\]
+\[
+  \frac{df}{dy}y + 2f = 0 
+\]
+\[
+  \frac{df}{f} = - \frac{2dy}{y}
+\]
+\[
+  ln(f) = -2ln(y)
+\]
+\[
+  f = \frac{1}{y^2}
+\]
+Вернемся к первоначальному ура-нию и домножим на $\frac{1}{y^2}$
+\[
+  (x-y)dx + (\frac{1}{y^2} - x)dy = 0
+\]
+\[
+ M = (x-y), N = (\frac{1}{y^2} - x) 
+\]
+\[
+  \frac{DM}{Dy} = -1; \frac{DN}{Dx} = -1
+\]
+\[
+  \begin{cases}
+    \frac{Du(x,y)}{Dx} = M \\ 
+    \frac{Du(x,y)}{Dy} = N
+  \end{cases}
+\]
+\[
+  \frac{Du}{Dx} = x - y
+\]
+\[
+  u = \int_{}^{}(x-y)dx + C(y)
+\]
+\[
+  u = \frac{x^2}{2} - xy + C(y)
+\]
+\[
+ \frac{Du}{Dy} = -x + C'(y) 
+\]
+\[
+  N' = (\frac{1}{y^2} - x)
+\]
+\[
+-x + C'(y) = \frac{1}{y^2} - x  
+\]
+\[
+  C'(y) = \frac{1}{y^2}
+\]
+\[
+  C(y) = \int_{}^{}\frac{1}{y^2}dy + C_1 = - \frac{1}{y} + C_1
+\]
+\[
+  (y^2-2x-2)dx + 2ydy = 0
+\]
+\[
+  \frac{DM}{Dy} = \frac{DN}{Dx}
+\]
+\[
+  \frac{D(y^2-2x-2)}{Dy}  = 2y, \frac{D2y}{Dx} = 0
+\]
+\[
+  \frac{\frac{DM}{Dy} - \frac{DN}{Dx}}{N} = \frac{2y}{2y} = 1 != f(x)
+\]
+\[
+  \frac{\frac{DN}{Dx} - \frac{DM}{Dy}}{M} = \frac{2y}{y^2 - 2x - 2} != f(y)
+\]
+\[
+  f(x)*(y^2 - 2x - 2)dx + f(x)*2ydy = 0
+\]
+\[
+  \frac{DM}{Dy} = f(x)*2y
+\]
+\[
+  \frac{DN}{dx} = f'(x)*2y
+\]
+\[
+  f(x)*2y = f'(x)*2y
+\]
+\[
+  f(x) = f'(x), f = e^x
+\]
+\[
+  \frac{df}{dx} = f 
+\]
+\[
+  \frac{df}{f} = dx => ln(f) = x
+\]
+\[
+  e^x(y^2 - 2x - 2)dx + e^x*2ydy = 0
+\]
+\[
+  \begin{cases}
+    M = e^x(y^2 - 2x- 2)\\ 
+    N = e^x*2y
+  \end{cases}
+\]
+\[
+  \begin{cases}
+    
+  \frac{Du}{Dx} =  e^x(y^2 -2x-2)\\ 
+  \frac{Du}{Dy} = e^x*2y
+\end{cases}
+\]
+\[
+  u = \int_{}^{}e^x2ydy = e^xy^2+C(x)
+\]
+\[
+  \frac{Du}{Dx} = e^x*y^2 + C'(x)
+\]
+\[
+  e^x*y^2 + C'(x)= e^x(y^2 - 2x-2)
+\]
+\[
+  e^xy^2 + C'(x) = e^xy^2 - e^x2x - 2e^x
+\]
+\[
+  C'(x) = -e^x2x - 2e^x
+\]
+\[
+  C(x) = 2 \int_{}^{}(-e^xx-e^x)dx + C_1
+\]
+\end{document}
