@@ -34,6 +34,8 @@ private slots:
 
     void on_SetLetter_clicked();
 
+    void on_EnterFullWord_clicked();
+
 signals:
     void myVariableChanged(int value);
 

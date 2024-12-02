@@ -103,6 +103,16 @@ class Game {
         void DecreaseAttempts(){
             attemptsLeft--;
         }
+        void FullWord(std::string text){
+            std::transform(text.begin(), text.end(), text.begin(),::toupper);
+            if (text == wordToGuess){
+                guessed = text;
+            }else{
+                attemptsLeft = 0;
+            }
+            DisplayGameState();
+            EndGame();
+        }
 
 
     private:
@@ -155,8 +165,6 @@ class Game {
 
 
             if (IsWordGuessed()) {
-
-
                 result =  "Вы угадали слово: " + wordToGuess;
             }else{
                result =  "Вы проиграли! Загаданное слово было: " + wordToGuess;

@@ -75,6 +75,7 @@ public:
     QVBoxLayout *verticalLayout_2;
     QTextEdit *textEdit;
     QPushButton *SetLetter;
+    QPushButton *EnterFullWord;
     QWidget *Plays;
     QWidget *verticalLayoutWidget_4;
     QVBoxLayout *Widget_2;
@@ -292,6 +293,9 @@ public:
         SetLetter = new QPushButton(PlayScreen);
         SetLetter->setObjectName("SetLetter");
         SetLetter->setGeometry(QRect(340, 210, 81, 26));
+        EnterFullWord = new QPushButton(PlayScreen);
+        EnterFullWord->setObjectName("EnterFullWord");
+        EnterFullWord->setGeometry(QRect(340, 180, 91, 26));
         Screens->addWidget(PlayScreen);
         Plays = new QWidget();
         Plays->setObjectName("Plays");
@@ -530,7 +534,8 @@ public:
 "</body>\n"
 "</html>", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        SetLetter->setText(QCoreApplication::translate("MainWindow", "Set", nullptr));
+        SetLetter->setText(QCoreApplication::translate("MainWindow", "hint", nullptr));
+        EnterFullWord->setText(QCoreApplication::translate("MainWindow", "\320\246\320\265\320\273\320\276\320\265 \321\201\320\273\320\276\320\262\320\276", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
 "<head>\n"
 "    <meta charset=\"UTF-8\">\n"

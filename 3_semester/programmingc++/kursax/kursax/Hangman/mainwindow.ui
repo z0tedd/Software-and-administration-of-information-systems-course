@@ -569,7 +569,20 @@
          </rect>
         </property>
         <property name="text">
-         <string>Set</string>
+         <string>hint</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="EnterFullWord">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>180</y>
+          <width>91</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Целое слово</string>
         </property>
        </widget>
       </widget>

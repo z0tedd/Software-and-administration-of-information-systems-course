@@ -11,6 +11,7 @@
 using json = nlohmann::json;
 
 Game localGame;
+QTextEdit * Kostyl;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -22,6 +23,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
     delete settings;
+    delete Kostyl;
 }
 
 void MainWindow::on_PlayButton_clicked()
@@ -214,5 +216,29 @@ void MainWindow::on_SetLetter_clicked()
     context["hint"] = "Подсказка уже была использована";
 
     hint.exec();
+}
+
+void onEnterFullWord(){
+    localGame.FullWord(Kostyl->toPlainText().toStdString());
+}
+
+void MainWindow::on_EnterFullWord_clicked()
+{
+    QDialog word = QDialog();
+    QHBoxLayout layout = QHBoxLayout(&word);
+
+    //QLabel text = QLabel(context["hint"].c_str());
+    QTextEdit text = QTextEdit();
+    QPushButton exit = QPushButton();
+    exit.setText("Set word");
+    layout.addWidget(&text);
+    layout.addWidget(&exit);
+    Kostyl = &text;
+
+    QObject::connect(&exit,&QPushButton::clicked,&word,&onEnterFullWord);
+    QObject::connect(&exit,&QPushButton::clicked,&word,&QDialog::close);
+
+    word.exec();
+
 }
 
