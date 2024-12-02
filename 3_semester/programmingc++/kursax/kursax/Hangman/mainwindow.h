@@ -30,6 +30,10 @@ private slots:
 
     void on_SaveSettings_clicked();
 
+    void on_textEdit_textChanged();
+
+    void on_SetLetter_clicked();
+
 signals:
     void myVariableChanged(int value);
 
@@ -41,7 +45,8 @@ public:
     void DisplayGameState(std::string guessed, int attemptsLeft, int maxAttempts);
 private:
     std::pair<std::string, std::string> GetRandomWord();
-    Settings *settings;
+    Settings *settings = new Settings();
     Ui::MainWindow *ui;
+    std::map<std::string,std::string> context;
 };
 #endif // MAINWINDOW_H

@@ -1,1 +1,0 @@
-/usr/bin/g++ -O2 -g -DNDEBUG CMakeFiles/Hangman.dir/Hangman_autogen/mocs_compilation.cpp.o CMakeFiles/Hangman.dir/main.cpp.o CMakeFiles/Hangman.dir/mainwindow.cpp.o -o Hangman  /usr/lib/libQt6Widgets.so.6.8.0 /usr/lib/libQt6Gui.so.6.8.0 /usr/lib/libGLX.so /usr/lib/libOpenGL.so /usr/lib/libQt6Core.so.6.8.0

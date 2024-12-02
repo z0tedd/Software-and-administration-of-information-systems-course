@@ -24,7 +24,7 @@
        <bool>true</bool>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="MainScreen">
        <widget class="QWidget" name="gridLayoutWidget_2">
@@ -240,7 +240,7 @@
          <item>
           <widget class="QStackedWidget" name="Animate">
            <property name="currentIndex">
-            <number>6</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="page_1">
             <widget class="QLabel" name="label">

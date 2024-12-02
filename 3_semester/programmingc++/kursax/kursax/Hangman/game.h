@@ -1,10 +1,11 @@
-#ifndef GAME_H
-#define GAME_H
+//#ifndef GAME_H
+//#define GAME_H
 
-class game
-{
-public:
-    game();
-};
+//#include "mainwindow.h"
+//#include "ui_mainwindow.h"
 
-#endif // GAME_H
+//#include <qtextedit.h>
+
+
+
+//#endif // GAME_H

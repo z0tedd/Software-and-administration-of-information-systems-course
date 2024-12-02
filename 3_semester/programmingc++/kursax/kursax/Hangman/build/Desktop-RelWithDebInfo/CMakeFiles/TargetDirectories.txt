@@ -1,9 +1,0 @@
-/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-RelWithDebInfo/CMakeFiles/Hangman.dir
-/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-RelWithDebInfo/CMakeFiles/edit_cache.dir
-/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-RelWithDebInfo/CMakeFiles/rebuild_cache.dir
-/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-RelWithDebInfo/CMakeFiles/list_install_components.dir
-/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-RelWithDebInfo/CMakeFiles/install.dir
-/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-RelWithDebInfo/CMakeFiles/install/local.dir
-/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-RelWithDebInfo/CMakeFiles/install/strip.dir
-/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-RelWithDebInfo/CMakeFiles/Hangman_autogen_timestamp_deps.dir
-/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-RelWithDebInfo/CMakeFiles/Hangman_autogen.dir

@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "game.cpp"
 #include <QLineEdit>
 #include <QFileDialog>
 #include <QDebug>
@@ -9,6 +10,7 @@
 #include "nlohmann/json.hpp" // Include the nlohmann::json library
 using json = nlohmann::json;
 
+Game localGame;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -70,7 +72,7 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_SettingsButton_clicked()
 {
     ui->Screens->setCurrentIndex(1);
-    settings = new Settings();
+
 }
 
 
@@ -95,8 +97,9 @@ void MainWindow::on_HumanComp_clicked()
 
 void MainWindow::on_CompHuman_clicked()
 {
-    auto wordAndHint  = GetRandomWord();
 
+    auto wordAndHint  = GetRandomWord();
+    context["hint"] = wordAndHint.second;
     ui->Screens->setCurrentIndex(3);
     std::string LabelString = "";
     for (size_t i=0;i<wordAndHint.first.size();i++){
@@ -104,6 +107,9 @@ void MainWindow::on_CompHuman_clicked()
     }
 
     ui->label_2->setText(QString::fromStdString(LabelString));
+     localGame = Game(ui,wordAndHint.first,7,3);
+    //localGame.Start();
+
 }
 
 
@@ -145,33 +151,13 @@ void MainWindow::on_GetPath_clicked()
     // }
     // for (auto var : data["easy"]) {
     //     std::cout << var["name"] << '\n' << var["age"] << '\n';
-    // }
+    // };
 
 
     qDebug()<< settings->GetPath();
 }
 
-    void MainWindow::DisplayGameState( std::string guessed, int attemptsLeft, int maxAttempts) {
-        int numFrames = 7;
 
-        ui ->label_2->setText(QString::fromStdString(guessed));
-
-        int stageIndex = maxAttempts - attemptsLeft;
-        double gap = static_cast<double>(maxAttempts) / (numFrames - 2);
-        // (numFrames - 2): reserve last frame for final failure.
-
-        if (attemptsLeft == 0) {
-            ui->Animate->setCurrentIndex(numFrames-1);
-        } else {
-            for (int i = 0; i < numFrames; ++i) {
-                if (static_cast<double>(stageIndex) <= gap * i) {
-            ui->Animate->setCurrentIndex(i);
-                    break;
-                }
-            }
-        }
-
-    }
 
 std::vector<std::string> split(const std::string &str, char delimiter) {
     std::vector<std::string> tokens;
@@ -205,5 +191,28 @@ void MainWindow::on_SaveSettings_clicked()
     }
     settings->SetDifficulty(input);
     qDebug() << settings->GetDifficulty();
+}
+
+
+void MainWindow::on_textEdit_textChanged()
+{
+    if (context["hint"] =="Подсказка уже была использована") {
+        localGame.DecreaseAttempts();
+    }
+    localGame.Check();
+    qDebug() << "niger";
+}
+
+
+void MainWindow::on_SetLetter_clicked()
+{
+    QDialog hint = QDialog();
+    QHBoxLayout layout = QHBoxLayout(&hint);
+
+    QLabel text = QLabel(context["hint"].c_str());
+    layout.addWidget(&text);
+    context["hint"] = "Подсказка уже была использована";
+
+    hint.exec();
 }
 

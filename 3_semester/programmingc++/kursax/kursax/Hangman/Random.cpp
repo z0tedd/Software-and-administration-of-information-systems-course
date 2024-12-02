@@ -11,6 +11,10 @@ using json = nlohmann::json;
 
 std::pair<std::string, std::string> MainWindow::GetRandomWord() {
     std::string fileName = settings->GetPath();
+    qDebug() << fileName;
+    if (fileName == "Use standart set"){
+        return {"anekdot", "joke"};
+    }
     // Dictionary contain all words sorted by category and difficulty
     std::ifstream file(fileName);
 

@@ -1,0 +1,8 @@
+/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-MinSizeRel/CMakeFiles/Hangman.dir
+/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-MinSizeRel/CMakeFiles/edit_cache.dir
+/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-MinSizeRel/CMakeFiles/rebuild_cache.dir
+/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-MinSizeRel/CMakeFiles/list_install_components.dir
+/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-MinSizeRel/CMakeFiles/install.dir
+/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-MinSizeRel/CMakeFiles/install/local.dir
+/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-MinSizeRel/CMakeFiles/install/strip.dir
+/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-MinSizeRel/CMakeFiles/Hangman_autogen.dir
