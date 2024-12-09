@@ -1,0 +1,40 @@
+
+\documentclass[a4paper,14pt]{extreport} % добавить leqno в [] для нумерации слева
+%\usepackage[14pt]{extsizes}
+\usepackage[left=3cm,right=1.5cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\linespread{1.45} %полуторный интервал
+\usepackage{titlesec}
+%%% Работа с русским языком
+\titleformat{\section}{\normalfont\bfseries}{\thechapter}{14pt}{\bfseries}
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{ fancyhdr} % улучшенная нумерация страниц
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+%\renewcommand{\sfdefault}{cmss}
+\usefont{T2A}{cmss}{m}{n}
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+% \newcommand \cdot {\hm}[1]{#1\nobreak\discretionary{}
+% 	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%\renewcommand{\sfdefault}{cmss}
+\usepackage{tempora}
+
+\begin{document}
+Лекция 06-12-2024 
+  
+\end{document}
