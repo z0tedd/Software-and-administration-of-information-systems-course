@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "Hangman_autogen/timestamp" "custom" "Hangman_autogen/deps"
+  "/home/z0tedd/Documents/university/3_semester/programmingc++/kursax/kursax/Hangman/Computer.cpp" "CMakeFiles/Hangman.dir/Computer.cpp.o" "gcc" "CMakeFiles/Hangman.dir/Computer.cpp.o.d"
   "/home/z0tedd/Documents/university/3 semester/programmingc++/kursax/kursax/Hangman/build/Desktop-Debug/Hangman_autogen/mocs_compilation.cpp" "CMakeFiles/Hangman.dir/Hangman_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/Hangman.dir/Hangman_autogen/mocs_compilation.cpp.o.d"
   "/home/z0tedd/Documents/university/3_semester/programmingc++/kursax/kursax/Hangman/Random.cpp" "CMakeFiles/Hangman.dir/Random.cpp.o" "gcc" "CMakeFiles/Hangman.dir/Random.cpp.o.d"
   "/home/z0tedd/Documents/university/3_semester/programmingc++/kursax/kursax/Hangman/Settings.cpp" "CMakeFiles/Hangman.dir/Settings.cpp.o" "gcc" "CMakeFiles/Hangman.dir/Settings.cpp.o.d"

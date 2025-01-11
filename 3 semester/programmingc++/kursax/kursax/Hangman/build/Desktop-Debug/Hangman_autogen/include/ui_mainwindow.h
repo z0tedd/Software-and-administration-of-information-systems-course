@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.8.0
+** Created by: Qt User Interface Compiler version 6.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -17,7 +17,6 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
-#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -49,6 +48,12 @@ public:
     QPushButton *HumanComp;
     QWidget *verticalLayoutWidget_6;
     QVBoxLayout *verticalLayout_5;
+    QPushButton *HumanHuman_2;
+    QWidget *verticalLayoutWidget_9;
+    QVBoxLayout *verticalLayout_8;
+    QPushButton *HumanHuman;
+    QWidget *verticalLayoutWidget_10;
+    QVBoxLayout *verticalLayout_9;
     QPushButton *CompHuman;
     QWidget *PlayScreen;
     QWidget *verticalLayoutWidget_2;
@@ -76,6 +81,25 @@ public:
     QTextEdit *textEdit;
     QPushButton *SetLetter;
     QPushButton *EnterFullWord;
+    QWidget *PlayersPlays;
+    QLabel *PlayersWord;
+    QTextEdit *PlayersEdit;
+    QStackedWidget *PlayersAnimate;
+    QWidget *page_22;
+    QLabel *label_25;
+    QWidget *page_23;
+    QLabel *label_26;
+    QWidget *page_24;
+    QLabel *label_27;
+    QWidget *page_25;
+    QLabel *label_28;
+    QWidget *page_26;
+    QLabel *label_29;
+    QWidget *page_27;
+    QLabel *label_30;
+    QWidget *page_28;
+    QLabel *label_31;
+    QLabel *CurrentPlayer;
     QWidget *Plays;
     QWidget *verticalLayoutWidget_4;
     QVBoxLayout *Widget_2;
@@ -97,8 +121,41 @@ public:
     QLabel *label_16;
     QTextEdit *textEdit_3;
     QPushButton *SetWord;
+    QWidget *PlayersWords;
+    QWidget *verticalLayoutWidget_11;
+    QVBoxLayout *verticalLayout_10;
+    QTextEdit *Player1;
+    QWidget *verticalLayoutWidget_12;
+    QVBoxLayout *verticalLayout_11;
+    QTextEdit *Player2;
+    QLabel *lbPlayer1;
+    QLabel *lbPlayer2;
+    QPushButton *SaveButton;
+    QWidget *page;
+    QPushButton *SetWord_2;
+    QPushButton *EnterFullWord_2;
+    QStackedWidget *Animate_3;
+    QWidget *page_15;
+    QLabel *label_17;
+    QWidget *page_16;
+    QLabel *label_18;
+    QWidget *page_17;
+    QLabel *label_19;
+    QWidget *page_18;
+    QLabel *label_20;
+    QWidget *page_19;
+    QLabel *label_21;
+    QWidget *page_20;
+    QLabel *label_22;
+    QWidget *page_21;
+    QLabel *label_23;
+    QWidget *verticalLayoutWidget_7;
+    QVBoxLayout *verticalLayout_6;
+    QTextEdit *textEdit_2;
+    QWidget *verticalLayoutWidget_8;
+    QVBoxLayout *verticalLayout_7;
+    QTextEdit *textEdit_4;
     QMenuBar *menubar;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -112,7 +169,9 @@ public:
         Screens = new QStackedWidget(centralwidget);
         Screens->setObjectName("Screens");
         Screens->setToolTipDuration(-1);
-        Screens->setAutoFillBackground(true);
+        Screens->setAutoFillBackground(false);
+        Screens->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"color: rgb(0,0,0);"));
         MainScreen = new QWidget();
         MainScreen->setObjectName("MainScreen");
         gridLayoutWidget_2 = new QWidget(MainScreen);
@@ -194,14 +253,36 @@ public:
 
         verticalLayoutWidget_6 = new QWidget(GameMenu);
         verticalLayoutWidget_6->setObjectName("verticalLayoutWidget_6");
-        verticalLayoutWidget_6->setGeometry(QRect(80, 90, 191, 61));
+        verticalLayoutWidget_6->setGeometry(QRect(350, 30, 191, 61));
         verticalLayout_5 = new QVBoxLayout(verticalLayoutWidget_6);
         verticalLayout_5->setObjectName("verticalLayout_5");
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
-        CompHuman = new QPushButton(verticalLayoutWidget_6);
+        HumanHuman_2 = new QPushButton(verticalLayoutWidget_6);
+        HumanHuman_2->setObjectName("HumanHuman_2");
+
+        verticalLayout_5->addWidget(HumanHuman_2);
+
+        verticalLayoutWidget_9 = new QWidget(GameMenu);
+        verticalLayoutWidget_9->setObjectName("verticalLayoutWidget_9");
+        verticalLayoutWidget_9->setGeometry(QRect(350, 180, 191, 61));
+        verticalLayout_8 = new QVBoxLayout(verticalLayoutWidget_9);
+        verticalLayout_8->setObjectName("verticalLayout_8");
+        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
+        HumanHuman = new QPushButton(verticalLayoutWidget_9);
+        HumanHuman->setObjectName("HumanHuman");
+
+        verticalLayout_8->addWidget(HumanHuman);
+
+        verticalLayoutWidget_10 = new QWidget(GameMenu);
+        verticalLayoutWidget_10->setObjectName("verticalLayoutWidget_10");
+        verticalLayoutWidget_10->setGeometry(QRect(80, 90, 191, 61));
+        verticalLayout_9 = new QVBoxLayout(verticalLayoutWidget_10);
+        verticalLayout_9->setObjectName("verticalLayout_9");
+        verticalLayout_9->setContentsMargins(0, 0, 0, 0);
+        CompHuman = new QPushButton(verticalLayoutWidget_10);
         CompHuman->setObjectName("CompHuman");
 
-        verticalLayout_5->addWidget(CompHuman);
+        verticalLayout_9->addWidget(CompHuman);
 
         Screens->addWidget(GameMenu);
         PlayScreen = new QWidget();
@@ -297,6 +378,72 @@ public:
         EnterFullWord->setObjectName("EnterFullWord");
         EnterFullWord->setGeometry(QRect(340, 180, 91, 26));
         Screens->addWidget(PlayScreen);
+        PlayersPlays = new QWidget();
+        PlayersPlays->setObjectName("PlayersPlays");
+        PlayersWord = new QLabel(PlayersPlays);
+        PlayersWord->setObjectName("PlayersWord");
+        PlayersWord->setGeometry(QRect(50, 20, 269, 78));
+        PlayersWord->setFont(font);
+        PlayersEdit = new QTextEdit(PlayersPlays);
+        PlayersEdit->setObjectName("PlayersEdit");
+        PlayersEdit->setGeometry(QRect(50, 170, 267, 76));
+        PlayersEdit->setFont(font);
+        PlayersAnimate = new QStackedWidget(PlayersPlays);
+        PlayersAnimate->setObjectName("PlayersAnimate");
+        PlayersAnimate->setGeometry(QRect(620, 10, 219, 259));
+        page_22 = new QWidget();
+        page_22->setObjectName("page_22");
+        label_25 = new QLabel(page_22);
+        label_25->setObjectName("label_25");
+        label_25->setGeometry(QRect(0, 0, 259, 296));
+        label_25->setFont(font);
+        PlayersAnimate->addWidget(page_22);
+        page_23 = new QWidget();
+        page_23->setObjectName("page_23");
+        label_26 = new QLabel(page_23);
+        label_26->setObjectName("label_26");
+        label_26->setGeometry(QRect(0, 0, 259, 296));
+        label_26->setFont(font);
+        PlayersAnimate->addWidget(page_23);
+        page_24 = new QWidget();
+        page_24->setObjectName("page_24");
+        label_27 = new QLabel(page_24);
+        label_27->setObjectName("label_27");
+        label_27->setGeometry(QRect(0, 0, 259, 261));
+        label_27->setFont(font);
+        PlayersAnimate->addWidget(page_24);
+        page_25 = new QWidget();
+        page_25->setObjectName("page_25");
+        label_28 = new QLabel(page_25);
+        label_28->setObjectName("label_28");
+        label_28->setGeometry(QRect(0, 0, 259, 296));
+        label_28->setFont(font);
+        PlayersAnimate->addWidget(page_25);
+        page_26 = new QWidget();
+        page_26->setObjectName("page_26");
+        label_29 = new QLabel(page_26);
+        label_29->setObjectName("label_29");
+        label_29->setGeometry(QRect(0, 0, 259, 296));
+        label_29->setFont(font);
+        PlayersAnimate->addWidget(page_26);
+        page_27 = new QWidget();
+        page_27->setObjectName("page_27");
+        label_30 = new QLabel(page_27);
+        label_30->setObjectName("label_30");
+        label_30->setGeometry(QRect(0, 0, 259, 296));
+        label_30->setFont(font);
+        PlayersAnimate->addWidget(page_27);
+        page_28 = new QWidget();
+        page_28->setObjectName("page_28");
+        label_31 = new QLabel(page_28);
+        label_31->setObjectName("label_31");
+        label_31->setGeometry(QRect(0, 0, 259, 296));
+        label_31->setFont(font);
+        PlayersAnimate->addWidget(page_28);
+        CurrentPlayer = new QLabel(PlayersPlays);
+        CurrentPlayer->setObjectName("CurrentPlayer");
+        CurrentPlayer->setGeometry(QRect(410, 20, 57, 18));
+        Screens->addWidget(PlayersPlays);
         Plays = new QWidget();
         Plays->setObjectName("Plays");
         verticalLayoutWidget_4 = new QWidget(Plays);
@@ -311,7 +458,7 @@ public:
         page_8->setObjectName("page_8");
         label_4 = new QLabel(page_8);
         label_4->setObjectName("label_4");
-        label_4->setGeometry(QRect(-10, -10, 259, 296));
+        label_4->setGeometry(QRect(0, 0, 259, 296));
         label_4->setFont(font);
         Animate_2->addWidget(page_8);
         page_9 = new QWidget();
@@ -371,6 +518,133 @@ public:
         SetWord->setObjectName("SetWord");
         SetWord->setGeometry(QRect(300, 60, 81, 26));
         Screens->addWidget(Plays);
+        PlayersWords = new QWidget();
+        PlayersWords->setObjectName("PlayersWords");
+        verticalLayoutWidget_11 = new QWidget(PlayersWords);
+        verticalLayoutWidget_11->setObjectName("verticalLayoutWidget_11");
+        verticalLayoutWidget_11->setGeometry(QRect(70, 70, 291, 80));
+        verticalLayout_10 = new QVBoxLayout(verticalLayoutWidget_11);
+        verticalLayout_10->setObjectName("verticalLayout_10");
+        verticalLayout_10->setContentsMargins(0, 0, 0, 0);
+        Player1 = new QTextEdit(verticalLayoutWidget_11);
+        Player1->setObjectName("Player1");
+        Player1->setStyleSheet(QString::fromUtf8("color: rgb(0,0,0);;\n"
+"background-color: rgb(222, 221, 218);"));
+
+        verticalLayout_10->addWidget(Player1);
+
+        verticalLayoutWidget_12 = new QWidget(PlayersWords);
+        verticalLayoutWidget_12->setObjectName("verticalLayoutWidget_12");
+        verticalLayoutWidget_12->setGeometry(QRect(510, 70, 291, 80));
+        verticalLayout_11 = new QVBoxLayout(verticalLayoutWidget_12);
+        verticalLayout_11->setObjectName("verticalLayout_11");
+        verticalLayout_11->setContentsMargins(0, 0, 0, 0);
+        Player2 = new QTextEdit(verticalLayoutWidget_12);
+        Player2->setObjectName("Player2");
+        Player2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"background-color: rgb(222, 221, 218);"));
+
+        verticalLayout_11->addWidget(Player2);
+
+        lbPlayer1 = new QLabel(PlayersWords);
+        lbPlayer1->setObjectName("lbPlayer1");
+        lbPlayer1->setGeometry(QRect(190, 40, 57, 18));
+        lbPlayer1->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        lbPlayer2 = new QLabel(PlayersWords);
+        lbPlayer2->setObjectName("lbPlayer2");
+        lbPlayer2->setGeometry(QRect(630, 40, 57, 18));
+        lbPlayer2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+        SaveButton = new QPushButton(PlayersWords);
+        SaveButton->setObjectName("SaveButton");
+        SaveButton->setGeometry(QRect(380, 220, 81, 26));
+        SaveButton->setStyleSheet(QString::fromUtf8("background-color: rgb(222, 221, 218);\n"
+"color: rgb(0, 0, 0);"));
+        Screens->addWidget(PlayersWords);
+        page = new QWidget();
+        page->setObjectName("page");
+        SetWord_2 = new QPushButton(page);
+        SetWord_2->setObjectName("SetWord_2");
+        SetWord_2->setGeometry(QRect(290, 50, 81, 26));
+        EnterFullWord_2 = new QPushButton(page);
+        EnterFullWord_2->setObjectName("EnterFullWord_2");
+        EnterFullWord_2->setGeometry(QRect(290, 190, 91, 26));
+        Animate_3 = new QStackedWidget(page);
+        Animate_3->setObjectName("Animate_3");
+        Animate_3->setGeometry(QRect(590, 0, 219, 259));
+        page_15 = new QWidget();
+        page_15->setObjectName("page_15");
+        label_17 = new QLabel(page_15);
+        label_17->setObjectName("label_17");
+        label_17->setGeometry(QRect(0, 0, 259, 296));
+        label_17->setFont(font);
+        Animate_3->addWidget(page_15);
+        page_16 = new QWidget();
+        page_16->setObjectName("page_16");
+        label_18 = new QLabel(page_16);
+        label_18->setObjectName("label_18");
+        label_18->setGeometry(QRect(0, 0, 259, 296));
+        label_18->setFont(font);
+        Animate_3->addWidget(page_16);
+        page_17 = new QWidget();
+        page_17->setObjectName("page_17");
+        label_19 = new QLabel(page_17);
+        label_19->setObjectName("label_19");
+        label_19->setGeometry(QRect(0, 0, 259, 261));
+        label_19->setFont(font);
+        Animate_3->addWidget(page_17);
+        page_18 = new QWidget();
+        page_18->setObjectName("page_18");
+        label_20 = new QLabel(page_18);
+        label_20->setObjectName("label_20");
+        label_20->setGeometry(QRect(0, 0, 259, 296));
+        label_20->setFont(font);
+        Animate_3->addWidget(page_18);
+        page_19 = new QWidget();
+        page_19->setObjectName("page_19");
+        label_21 = new QLabel(page_19);
+        label_21->setObjectName("label_21");
+        label_21->setGeometry(QRect(0, 0, 259, 296));
+        label_21->setFont(font);
+        Animate_3->addWidget(page_19);
+        page_20 = new QWidget();
+        page_20->setObjectName("page_20");
+        label_22 = new QLabel(page_20);
+        label_22->setObjectName("label_22");
+        label_22->setGeometry(QRect(0, 0, 259, 296));
+        label_22->setFont(font);
+        Animate_3->addWidget(page_20);
+        page_21 = new QWidget();
+        page_21->setObjectName("page_21");
+        label_23 = new QLabel(page_21);
+        label_23->setObjectName("label_23");
+        label_23->setGeometry(QRect(0, 0, 259, 296));
+        label_23->setFont(font);
+        Animate_3->addWidget(page_21);
+        verticalLayoutWidget_7 = new QWidget(page);
+        verticalLayoutWidget_7->setObjectName("verticalLayoutWidget_7");
+        verticalLayoutWidget_7->setGeometry(QRect(10, 180, 269, 78));
+        verticalLayout_6 = new QVBoxLayout(verticalLayoutWidget_7);
+        verticalLayout_6->setObjectName("verticalLayout_6");
+        verticalLayout_6->setContentsMargins(0, 0, 0, 0);
+        textEdit_2 = new QTextEdit(verticalLayoutWidget_7);
+        textEdit_2->setObjectName("textEdit_2");
+        textEdit_2->setFont(font);
+
+        verticalLayout_6->addWidget(textEdit_2);
+
+        verticalLayoutWidget_8 = new QWidget(page);
+        verticalLayoutWidget_8->setObjectName("verticalLayoutWidget_8");
+        verticalLayoutWidget_8->setGeometry(QRect(10, 20, 269, 78));
+        verticalLayout_7 = new QVBoxLayout(verticalLayoutWidget_8);
+        verticalLayout_7->setObjectName("verticalLayout_7");
+        verticalLayout_7->setContentsMargins(0, 0, 0, 0);
+        textEdit_4 = new QTextEdit(verticalLayoutWidget_8);
+        textEdit_4->setObjectName("textEdit_4");
+        textEdit_4->setFont(font);
+
+        verticalLayout_7->addWidget(textEdit_4);
+
+        Screens->addWidget(page);
 
         verticalLayout_3->addWidget(Screens);
 
@@ -379,16 +653,15 @@ public:
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 911, 23));
         MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName("statusbar");
-        MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
         QObject::connect(GetPath, &QPushButton::clicked, path, qOverload<>(&QLabel::clear));
 
         Screens->setCurrentIndex(0);
         Animate->setCurrentIndex(0);
+        PlayersAnimate->setCurrentIndex(0);
         Animate_2->setCurrentIndex(0);
+        Animate_3->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -406,6 +679,8 @@ public:
         Options->setText(QCoreApplication::translate("MainWindow", "None", nullptr));
         SaveSettings->setText(QCoreApplication::translate("MainWindow", "\320\237\321\200\320\270\320\274\320\265\320\275\320\270\321\202\321\214", nullptr));
         HumanComp->setText(QCoreApplication::translate("MainWindow", "\320\247\320\265\320\273\320\276\320\262\320\265\320\272 vs \320\232\320\276\320\274\320\277\321\214\321\216\321\202\320\265\321\200", nullptr));
+        HumanHuman_2->setText(QCoreApplication::translate("MainWindow", "\320\247\320\265\320\273\320\276\320\262\320\265\320\272 vs \320\247\320\265\320\273\320\276\320\262\320\265\320\272", nullptr));
+        HumanHuman->setText(QCoreApplication::translate("MainWindow", "\320\247\320\265\320\273\320\276\320\262\320\265\320\272 vs  \320\247\320\265\320\273\320\276\320\262\320\265\320\272", nullptr));
         CompHuman->setText(QCoreApplication::translate("MainWindow", "\320\232\320\276\320\274\320\277\321\214\321\216\321\202\320\265\321\200 vs  \320\247\320\265\320\273\320\276\320\262\320\265\320\272", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
 "<head>\n"
@@ -536,6 +811,134 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         SetLetter->setText(QCoreApplication::translate("MainWindow", "hint", nullptr));
         EnterFullWord->setText(QCoreApplication::translate("MainWindow", "\320\246\320\265\320\273\320\276\320\265 \321\201\320\273\320\276\320\262\320\276", nullptr));
+        PlayersWord->setText(QCoreApplication::translate("MainWindow", "~~~~~~", nullptr));
+        label_25->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"           |\n"
+"           |\n"
+"           |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_26->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"           |\n"
+"           |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_27->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"     |     |\n"
+"           |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_28->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"    /|     |\n"
+"           |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_29->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"    /|\\    |\n"
+"           |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_30->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"    /|\\    |\n"
+"    /      |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_31->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"    /|\\    |\n"
+"    / \\    |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        CurrentPlayer->setText(QCoreApplication::translate("MainWindow", "Player 1", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
 "<head>\n"
 "    <meta charset=\"UTF-8\">\n"
@@ -664,6 +1067,137 @@ public:
 "</html>", nullptr));
         label_16->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         SetWord->setText(QCoreApplication::translate("MainWindow", "Set", nullptr));
+        lbPlayer1->setText(QCoreApplication::translate("MainWindow", "Player 1", nullptr));
+        lbPlayer2->setText(QCoreApplication::translate("MainWindow", "Player 2", nullptr));
+        SaveButton->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
+        SetWord_2->setText(QCoreApplication::translate("MainWindow", "Set", nullptr));
+        EnterFullWord_2->setText(QCoreApplication::translate("MainWindow", "\320\246\320\265\320\273\320\276\320\265 \321\201\320\273\320\276\320\262\320\276", nullptr));
+        label_17->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"           |\n"
+"           |\n"
+"           |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_18->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"           |\n"
+"           |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_19->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"     |     |\n"
+"           |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_20->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"    /|     |\n"
+"           |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_21->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"    /|\\    |\n"
+"           |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_22->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"    /|\\    |\n"
+"    /      |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
+        label_23->setText(QCoreApplication::translate("MainWindow", "<html lang=\"en\">\n"
+"<head>\n"
+"    <meta charset=\"UTF-8\">\n"
+"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+"    <title>ASCII Art in HTML</title>\n"
+"</head>\n"
+"<body>\n"
+"    <pre>\n"
+"     _______\n"
+"     |    \\|\n"
+"     O     |\n"
+"    /|\\    |\n"
+"    / \\    |\n"
+"          /|\n"
+"  ===========\n"
+"    </pre>\n"
+"</body>\n"
+"</html>", nullptr));
     } // retranslateUi
 
 };

@@ -8,7 +8,7 @@ private:
     std::string jsonPath;
     std::string difficulty;
 public:
-    std::string difficultys;
+    //std::string difficultys;
     Settings(): jsonPath("Use standart set"), difficulty("0"){}
     void SetAll(std::string path, std::string d){
         jsonPath = path;

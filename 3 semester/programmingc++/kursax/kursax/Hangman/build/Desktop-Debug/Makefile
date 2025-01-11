@@ -175,6 +175,19 @@ Hangman/fast:
 .PHONY : Hangman/fast
 
 #=============================================================================
+# Target rules for targets named Hangman_autogen_timestamp_deps
+
+# Build rule for target.
+Hangman_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Hangman_autogen_timestamp_deps
+.PHONY : Hangman_autogen_timestamp_deps
+
+# fast build rule for target.
+Hangman_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hangman_autogen_timestamp_deps.dir/build.make CMakeFiles/Hangman_autogen_timestamp_deps.dir/build
+.PHONY : Hangman_autogen_timestamp_deps/fast
+
+#=============================================================================
 # Target rules for targets named Hangman_autogen
 
 # Build rule for target.
@@ -186,6 +199,30 @@ Hangman_autogen: cmake_check_build_system
 Hangman_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hangman_autogen.dir/build.make CMakeFiles/Hangman_autogen.dir/build
 .PHONY : Hangman_autogen/fast
+
+Computer.o: Computer.cpp.o
+.PHONY : Computer.o
+
+# target to build an object file
+Computer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hangman.dir/build.make CMakeFiles/Hangman.dir/Computer.cpp.o
+.PHONY : Computer.cpp.o
+
+Computer.i: Computer.cpp.i
+.PHONY : Computer.i
+
+# target to preprocess a source file
+Computer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hangman.dir/build.make CMakeFiles/Hangman.dir/Computer.cpp.i
+.PHONY : Computer.cpp.i
+
+Computer.s: Computer.cpp.s
+.PHONY : Computer.s
+
+# target to generate assembly for a file
+Computer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Hangman.dir/build.make CMakeFiles/Hangman.dir/Computer.cpp.s
+.PHONY : Computer.cpp.s
 
 Hangman_autogen/mocs_compilation.o: Hangman_autogen/mocs_compilation.cpp.o
 .PHONY : Hangman_autogen/mocs_compilation.o
@@ -344,7 +381,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Hangman_autogen"
+	@echo "... Hangman_autogen_timestamp_deps"
 	@echo "... Hangman"
+	@echo "... Computer.o"
+	@echo "... Computer.i"
+	@echo "... Computer.s"
 	@echo "... Hangman_autogen/mocs_compilation.o"
 	@echo "... Hangman_autogen/mocs_compilation.i"
 	@echo "... Hangman_autogen/mocs_compilation.s"

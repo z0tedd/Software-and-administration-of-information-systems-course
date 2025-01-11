@@ -4,16 +4,22 @@
 #include "nlohmann/json.hpp" // Include the nlohmann::json library
 #include <cstdlib> // for rand and srand
 #include <ctime>   // for time
-#include <random>  // for random_device and uniform_int_distribution
 #include "mainwindow.h"
+#include <stdexcept>
 
+class MyCustomError : public std::runtime_error {
+public:
+    MyCustomError(const std::string& what_arg) : std::runtime_error(what_arg) {}
+};
 using json = nlohmann::json;
 
 std::pair<std::string, std::string> MainWindow::GetRandomWord() {
     std::string fileName = settings->GetPath();
     qDebug() << fileName;
     if (fileName == "Use standart set"){
-        return {"anekdot", "joke"};
+
+    int randIndex = std::rand() % DefaultWords.size();
+        return DefaultWords[randIndex];
     }
     // Dictionary contain all words sorted by category and difficulty
     std::ifstream file(fileName);
@@ -21,14 +27,14 @@ std::pair<std::string, std::string> MainWindow::GetRandomWord() {
     if (!file) {
 
         std::cerr << "Error opening file: " << fileName << std::endl;
-        throw std::runtime_error("Failed to open file");
+        throw MyCustomError("Failed to open file");
         return {"",""};
     }
     json data; // This will hold the parsed JSON data
     try {
         file >> data; // Parse the JSON content from the file into 'data'
     } catch (json::parse_error &e) {
-        throw std::runtime_error("Failed to parse json");
+        throw MyCustomError("Failed to parse json");
         std::cerr << "JSON parse error: " << e.what() << std::endl;
         return {"",""};
     }

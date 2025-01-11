@@ -1,6 +1,8 @@
 /home/z0tedd/Documents/university/3\ semester/programmingc++/kursax/kursax/Hangman/build/Desktop-Debug/Hangman_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/z0tedd/Documents/university/3_semester/programmingc++/kursax/kursax/Hangman/mainwindow.h \
   /home/z0tedd/Documents/university/3\ semester/programmingc++/kursax/kursax/Hangman/build/Desktop-Debug/Hangman_autogen/moc_predefs.h \
+  /home/z0tedd/Documents/university/3_semester/programmingc++/kursax/kursax/Hangman/Computer.cpp \
   /home/z0tedd/Documents/university/3_semester/programmingc++/kursax/kursax/Hangman/Settings.cpp \
+  /home/z0tedd/Documents/university/3_semester/programmingc++/kursax/kursax/Hangman/game.cpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -247,6 +249,12 @@
   /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/pthread.h \
+  /usr/include/qt6/QtCore/QChar \
+  /usr/include/qt6/QtCore/QDebug \
+  /usr/include/qt6/QtCore/QHash \
+  /usr/include/qt6/QtCore/QList \
+  /usr/include/qt6/QtCore/QString \
+  /usr/include/qt6/QtCore/QVector \
   /usr/include/qt6/QtCore/q20functional.h \
   /usr/include/qt6/QtCore/q20iterator.h \
   /usr/include/qt6/QtCore/q20memory.h \
@@ -361,9 +369,11 @@
   /usr/include/qt6/QtCore/qtversionchecks.h \
   /usr/include/qt6/QtCore/qtypeinfo.h \
   /usr/include/qt6/QtCore/qtypes.h \
+  /usr/include/qt6/QtCore/qurl.h \
   /usr/include/qt6/QtCore/qutf8stringview.h \
   /usr/include/qt6/QtCore/qvariant.h \
   /usr/include/qt6/QtCore/qvarlengtharray.h \
+  /usr/include/qt6/QtCore/qvector.h \
   /usr/include/qt6/QtCore/qversiontagging.h \
   /usr/include/qt6/QtCore/qxptype_traits.h \
   /usr/include/qt6/QtCore/qyieldcpu.h \
@@ -380,18 +390,28 @@
   /usr/include/qt6/QtGui/qkeysequence.h \
   /usr/include/qt6/QtGui/qpaintdevice.h \
   /usr/include/qt6/QtGui/qpalette.h \
+  /usr/include/qt6/QtGui/qpen.h \
   /usr/include/qt6/QtGui/qpixelformat.h \
   /usr/include/qt6/QtGui/qpixmap.h \
   /usr/include/qt6/QtGui/qpolygon.h \
   /usr/include/qt6/QtGui/qregion.h \
   /usr/include/qt6/QtGui/qrgb.h \
   /usr/include/qt6/QtGui/qrgba64.h \
+  /usr/include/qt6/QtGui/qtextcursor.h \
+  /usr/include/qt6/QtGui/qtextdocument.h \
+  /usr/include/qt6/QtGui/qtextformat.h \
+  /usr/include/qt6/QtGui/qtextoption.h \
   /usr/include/qt6/QtGui/qtgui-config.h \
   /usr/include/qt6/QtGui/qtguiexports.h \
   /usr/include/qt6/QtGui/qtguiglobal.h \
   /usr/include/qt6/QtGui/qtransform.h \
   /usr/include/qt6/QtGui/qwindowdefs.h \
+  /usr/include/qt6/QtWidgets/QDialog \
+  /usr/include/qt6/QtWidgets/QLineEdit \
   /usr/include/qt6/QtWidgets/QMainWindow \
+  /usr/include/qt6/QtWidgets/qdialog.h \
+  /usr/include/qt6/QtWidgets/qframe.h \
+  /usr/include/qt6/QtWidgets/qlineedit.h \
   /usr/include/qt6/QtWidgets/qmainwindow.h \
   /usr/include/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/qt6/QtWidgets/qtabwidget.h \

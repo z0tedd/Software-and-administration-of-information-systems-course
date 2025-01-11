@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Hangman_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/Hangman_autogen.dir/ParseCache.txt"
   "Hangman_autogen"
+  "CMakeFiles/Hangman.dir/Computer.cpp.o"
+  "CMakeFiles/Hangman.dir/Computer.cpp.o.d"
   "CMakeFiles/Hangman.dir/Hangman_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/Hangman.dir/Hangman_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/Hangman.dir/Random.cpp.o"
@@ -17,7 +19,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Hangman.dir/mainwindow.cpp.o.d"
   "Hangman"
   "Hangman.pdb"
-  "Hangman_autogen/include/ui_mainwindow.h"
   "Hangman_autogen/mocs_compilation.cpp"
   "Hangman_autogen/timestamp"
 )

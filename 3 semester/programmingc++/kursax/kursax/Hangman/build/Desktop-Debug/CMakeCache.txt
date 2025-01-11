@@ -334,6 +334,9 @@ QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 //Skip Qt Creator's package manager auto-setup
 QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP:BOOL=OFF
 
+//Qt Creator source groups extensions
+QT_CREATOR_SOURCE_GROUPS:BOOL=ON
+
 //The directory containing a CMake configuration file for QT.
 QT_DIR:PATH=/usr/lib/cmake/Qt6
 
@@ -404,7 +407,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=31
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/usr/bin/cmake
 //Path to cpack program executable.
@@ -685,6 +688,8 @@ QT_FEATURE_avx512vbmi2:INTERNAL=ON
 QT_FEATURE_avx512vl:INTERNAL=ON
 //Qt feature: backtrace (from target Qt6::Core)
 QT_FEATURE_backtrace:INTERNAL=ON
+//Qt feature: broken_threadlocal_dtors (from target Qt6::Core)
+QT_FEATURE_broken_threadlocal_dtors:INTERNAL=OFF
 //Qt feature: buttongroup (from target Qt6::Widgets)
 QT_FEATURE_buttongroup:INTERNAL=ON
 //Qt feature: calendarwidget (from target Qt6::Widgets)
