@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "auto-word"
+version = "0.1.0"
+description = ""
+authors = ["z0tedd <z0tedd@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+python-docx = "^1.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

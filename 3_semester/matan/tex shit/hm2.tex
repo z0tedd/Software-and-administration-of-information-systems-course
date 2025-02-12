@@ -1,0 +1,64 @@
+
+
+
+\documentclass{article}
+
+\usepackage[left=3cm,right=1.5cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\linespread{1.45} %полуторный интервал
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{ fancyhdr} % улучшенная нумерация страниц
+\usepackage{amsmath}
+
+\begin{document}
+
+Задача просит найти градиент функции двух переменных:
+
+\[
+f(x_1, x_2) = \frac{1}{1 + e^{-x_1}} + \frac{1}{1 + e^{-x_2}}
+\]
+
+в точке \( (0, 0) \).
+
+ Найдем частные производные.
+
+Функция состоит из двух слагаемых, каждое из которых зависит только от одной переменной. Рассмотрим отдельно каждую из них.
+
+1. Частная производная по \( x_1 \):
+
+\[
+\frac{\partial f}{\partial x_1} = \frac{d}{d x_1} \left( \frac{1}{1 + e^{-x_1}} \right) = \frac{e^{-x_1}}{(1 + e^{-x_1})^2}
+\]
+
+Для точки \( (x_1, x_2) = (0, 0) \):
+
+\[
+\frac{\partial f}{\partial x_1} \bigg|_{(0, 0)} = \frac{e^0}{(1 + e^0)^2} = \frac{1}{(1+1)^2} = \frac{1}{4}
+\]
+
+2. Частная производная по \( x_2 \):
+
+\[
+\frac{\partial f}{\partial x_2} = \frac{d}{d x_2} \left( \frac{1}{1 + e^{-x_2}} \right) = \frac{e^{-x_2}}{(1 + e^{-x_2})^2}
+\]
+
+Для точки \( (x_2 = 0) \):
+
+\[
+\frac{\partial f}{\partial x_2} \bigg|_{(0, 0)} = \frac{e^0}{(1 + e^0)^2} = \frac{1}{(1+1)^2} = \frac{1}{4}
+\]
+
+ Градиент функции:
+
+Градиент — это вектор, составленный из частных производных по каждой переменной:
+
+\[
+\nabla f(0, 0) = \left( \frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2} \right) = \left( \frac{1}{4}, \frac{1}{4} \right)
+\]
+
+Ответ:$1/4 1/4$.
+\end{document}

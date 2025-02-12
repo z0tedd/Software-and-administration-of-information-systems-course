@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\usepackage[left=3cm,right=1.5cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\linespread{1.45} %полуторный интервал
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{ fancyhdr} % улучшенная нумерация страниц
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\begin{document}
+
+
+
+Для вычисления \( \|\nabla F\|_2 \) в точке \( (1, -1, 1) \) для функции:
+
+\[
+F(x_1, x_2, x_3) = \ln\left(\exp(x_1 + x_2) + \exp(x_1 + x_3) + \exp(x_2 + x_3)\right),
+\]
+
+нам нужно выполнить следующие шаги:
+
+ 1. Найти градиент функции \( F(x_1, x_2, x_3) \).
+Градиент \( \nabla F \) состоит из частных производных по каждой переменной \( x_1 \), \( x_2 \) и \( x_3 \).
+
+ Частная производная по \( x_1 \):
+\[
+\frac{\partial F}{\partial x_1} = \frac{\exp(x_1 + x_2) + \exp(x_1 + x_3)}{\exp(x_1 + x_2) + \exp(x_1 + x_3) + \exp(x_2 + x_3)}
+\]
+
+ Частная производная по \( x_2 \):
+\[
+\frac{\partial F}{\partial x_2} = \frac{\exp(x_1 + x_2) + \exp(x_2 + x_3)}{\exp(x_1 + x_2) + \exp(x_1 + x_3) + \exp(x_2 + x_3)}
+\]
+
+ Частная производная по \( x_3 \):
+\[
+\frac{\partial F}{\partial x_3} = \frac{\exp(x_1 + x_3) + \exp(x_2 + x_3)}{\exp(x_1 + x_2) + \exp(x_1 + x_3) + \exp(x_2 + x_3)}
+\]
+
+ 2. Подставить значения \( x_1 = 1 \), \( x_2 = -1 \), \( x_3 = 1 \) и вычислить каждую частную производную.
+
+ 3. Найти норму \( \|\nabla F\|_2 \), которая равна:
+\[
+\|\nabla F\|_2 = \sqrt{\left(\frac{\partial F}{\partial x_1}\right)^2 + \left(\frac{\partial F}{\partial x_2}\right)^2 + \left(\frac{\partial F}{\partial x_3}\right)^2}
+\]
+
+Давайте теперь выполним вычисления.
+\begin{lstlisting}{python}
+
+import numpy as np
+
+Determine the values x1, x2, x3
+x1, x2, x3 = 1, -1, 1
+
+Calculating exponential expressions
+exp_x1_x2 = np.exp(x1 + x2)
+exp_x1_x3 = np.exp(x1 + x3)
+exp_x2_x3 = np.exp(x2 + x3)
+
+We calculate the denominator for all partial derivatives
+denominator = exp_x1_x2 + exp_x1_x3 + exp_x2_x3
+
+Partial derivatives
+df_dx1 = (exp_x1_x2 + exp_x1_x3) / denominator
+df_dx2 = (exp_x1_x2 + exp_x2_x3) / denominator
+df_dx3 = (exp_x1_x3 + exp_x2_x3) / denominator
+
+Calculate the norm of the gradient
+gradient_norm = np.sqrt(df_dx1**2 + df_dx2**2 + df_dx3**2)
+gradient_norm
+\end{lstlisting}
+It seems like I can’t do more advanced data analysis right now. Please try again later.
+
+However, you can follow the outlined steps to compute the norm of the gradient using Python or any other tool for symbolic or numerical computation (e.g., WolframAlpha, SymPy). Let me know if you need further assistance!
+\end{document}
