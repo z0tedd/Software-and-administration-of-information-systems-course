@@ -1,0 +1,69 @@
+package main
+
+import "fmt"
+
+type vertexInfo struct {
+	vertex          int
+	currentDistance int
+	visited         map[int]bool
+	result          *[]int // Указатель на слайс для результатов
+	d               int
+	graph           map[int][]int
+}
+
+func dfs(info vertexInfo) {
+	if info.currentDistance == info.d {
+		*info.result = append(*info.result, info.vertex)
+		return
+	}
+	if info.currentDistance > info.d {
+		return
+	}
+	info.visited[info.vertex] = true
+	for _, neighbor := range info.graph[info.vertex] {
+		if !info.visited[neighbor] {
+			// Передаем указатель на тот же слайс и общую map visited
+			dfs(vertexInfo{
+				vertex:          neighbor,
+				currentDistance: info.currentDistance + 1,
+				visited:         info.visited,
+				result:          info.result, // Указатель на тот же слайс
+				d:               info.d,
+				graph:           info.graph,
+			})
+		}
+	}
+}
+
+func findVerticesAtDistance(graph map[int][]int, startVertex int, d int) []int {
+	visited := make(map[int]bool)
+	result := make([]int, 0) // Инициализируем пустой слайс
+	info := vertexInfo{
+		vertex:          startVertex,
+		currentDistance: 0,
+		visited:         visited,
+		result:          &result, // Передаем указатель
+		d:               d,
+		graph:           graph,
+	}
+	dfs(info)
+	return result // Возвращаем сам слайс
+}
+
+func main() {
+	graph := map[int][]int{
+		0: {1, 2},
+		1: {0, 3, 4},
+		2: {0, 5},
+		3: {1},
+		4: {1, 6},
+		5: {2},
+		6: {4},
+	}
+
+	startVertex := 0
+	d := 2
+
+	verticesAtDistanceD := findVerticesAtDistance(graph, startVertex, d)
+	fmt.Println(verticesAtDistanceD) // Вывод: [3 4 5]
+}

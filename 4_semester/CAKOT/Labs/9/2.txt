@@ -1,0 +1,56 @@
+package main
+
+import "fmt"
+
+type vertexInfo struct {
+  vertex          int
+  currentDistance int
+  visited         map[int]bool
+  result          *[]int
+  d               int
+  graph           map[int][]int
+}
+
+func dfs(info vertexInfo) {
+  if info.currentDistance == info.d {
+    *info.result = append(*info.result, info.vertex)
+    return
+  }
+  if info.currentDistance > info.d {
+    return
+  }
+  info.visited[info.vertex] = true
+
+  for _, neighbor := range info.graph[info.vertex] {
+    if !info.visited[neighbor] {
+      dfs(vertexInfo{vertex: neighbor, currentDistance: info.currentDistance + 1, visited: info.visited})
+    }
+  }
+}
+
+func findVerticesAtDistance(graph map[int][]int, startVertex int, d int) []int {
+  visited := make(map[int]bool)
+  endInfo := vertexInfo{vertex: startVertex, currentDistance: 0, visited: visited, d: d, graph: graph}
+  dfs(endInfo)
+  return *endInfo.result
+}
+
+func main() {
+  // Пример графа в виде списка смежности
+  graph := map[int][]int{
+    0: {1, 2},
+    1: {0, 3, 4},
+    2: {0, 5},
+    3: {1},
+    4: {1, 6},
+    5: {2},
+    6: {4},
+  }
+
+  startVertex := 0
+  d := 2
+
+  // Вызов функции и вывод результата
+  verticesAtDistanceD := findVerticesAtDistance(graph, startVertex, d)
+  fmt.Println(verticesAtDistanceD) // Вывод: [3 4 5]
+}
